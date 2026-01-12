@@ -56,6 +56,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'django_filters',
     'corsheaders',
+    'drf_spectacular',
+    'drf_spectacular_sidecar',
 
     # Local apps
     'admin_core',
@@ -198,6 +200,31 @@ REST_FRAMEWORK = {
     'ORDERING_PARAM': 'ordering',
     'SEARCH_PARAM': 'search',
     'FILTER_BACKEND': 'rest_framework.filters.DjangoFilterBackend',
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+# ============================================================================
+# OpenAPI / drf-spectacular Configuration
+# ============================================================================
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Admin Portal API',
+    'DESCRIPTION': 'Django Admin Portal REST API with RBAC, hierarchy, approvals, and audit logging.',
+    'VERSION': '1.0.0',
+    'SERVE_PUBLIC': True,
+    'SERVERS': [{
+        'url': 'http://127.0.0.1:8000',
+        'description': 'Local dev server'
+    }],
+    'COMPONENT_SPLIT_REQUEST': True,
+    'SCHEMA_PATH_PREFIX': '/api',
+    'SWAGGER_UI_SETTINGS': {
+        'persistAuthorization': True,
+        'displayRequestDuration': True,
+    },
+    'REDOC_UI_SETTINGS': {
+        'expandResponses': 'all',
+    },
 }
 
 # ============================================================================
@@ -270,6 +297,12 @@ CORS_ALLOWED_ORIGINS = [
 ]
 
 CORS_ALLOW_CREDENTIALS = True
+
+# Trust frontend origins for CSRF (if session is used anywhere)
+CSRF_TRUSTED_ORIGINS = [
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+]
 
 # ============================================================================
 # Additional Security Settings

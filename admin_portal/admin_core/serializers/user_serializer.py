@@ -90,7 +90,6 @@ class UserSerializer(serializers.ModelSerializer):
             'roles',
             'role_ids',
             'is_active',
-            'created_at' if hasattr(User, 'created_at') else None,
         ]
         read_only_fields = ['id', 'full_name']
         extra_kwargs = {
@@ -99,12 +98,6 @@ class UserSerializer(serializers.ModelSerializer):
             'employee_id': {'required': True},
             'designation': {'required': True},
         }
-    
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        # Remove created_at from fields if it doesn't exist
-        if 'created_at' in self.fields and None:
-            self.fields.pop('created_at')
     
     def validate_password(self, value):
         """Validate password strength."""

@@ -13,6 +13,7 @@ from rest_framework.response import Response
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.viewsets import ViewSet
+from rest_framework.authentication import TokenAuthentication
 
 from admin_core.serializers import UserSerializer
 from admin_core.services.auth_service import AuthService
@@ -31,6 +32,8 @@ class LoginView(ViewSet):
     - user: User details
     """
     permission_classes = [AllowAny]
+    # Disable authentication on login to avoid CSRF checks from SessionAuthentication
+    authentication_classes = []
     
     def create(self, request):
         """Handle login request."""
@@ -89,6 +92,7 @@ class LogoutView(ViewSet):
     - message: Success message
     """
     permission_classes = [IsAuthenticated]
+    authentication_classes = [TokenAuthentication]
     
     def create(self, request):
         """Handle logout request."""
@@ -130,6 +134,7 @@ class ChangePasswordView(ViewSet):
     - message: Success message
     """
     permission_classes = [IsAuthenticated]
+    authentication_classes = [TokenAuthentication]
     
     def create(self, request):
         """Handle change password request."""
@@ -174,6 +179,7 @@ class CurrentUserView(ViewSet):
     - Current user details
     """
     permission_classes = [IsAuthenticated]
+    authentication_classes = [TokenAuthentication]
     
     def list(self, request):
         """Get current user details."""
