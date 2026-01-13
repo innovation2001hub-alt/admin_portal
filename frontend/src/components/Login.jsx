@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
-  const [username, setUsername] = useState('');
+  const [employeeId, setEmployeeId] = useState('');
   const [password, setPassword] = useState('');
   const [localError, setLocalError] = useState('');
   const { login, loading, error } = useAuth();
@@ -14,12 +14,12 @@ const Login = () => {
     e.preventDefault();
     setLocalError('');
 
-    if (!username || !password) {
-      setLocalError('Please enter both username and password');
+    if (!employeeId || !password) {
+      setLocalError('Please enter both Employee ID and password');
       return;
     }
 
-    const result = await login(username, password);
+    const result = await login(employeeId, password);
     
     if (result.success) {
       // Redirect to dashboard after successful login
@@ -43,13 +43,13 @@ const Login = () => {
           )}
 
           <div className="form-group">
-            <label htmlFor="username">Username</label>
+            <label htmlFor="employeeId">Employee ID (PF ID)</label>
             <input
               type="text"
-              id="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              placeholder="Enter your username"
+              id="employeeId"
+              value={employeeId}
+              onChange={(e) => setEmployeeId(e.target.value)}
+              placeholder="Enter your Employee ID"
               disabled={loading}
               autoFocus
             />
@@ -77,7 +77,7 @@ const Login = () => {
         </form>
 
         <div className="login-footer">
-          <p>Default credentials: admin / AdminPortal@123</p>
+          <p>Please use your Employee ID and password to login</p>
         </div>
       </div>
     </div>

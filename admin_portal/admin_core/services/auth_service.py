@@ -21,12 +21,12 @@ class AuthService:
     """
     
     @staticmethod
-    def authenticate_user(username, password, ip_address=None):
+    def authenticate_user(employee_id, password, ip_address=None):
         """
-        Authenticate user with username and password.
+        Authenticate user with employee_id (PF ID) and password.
         
         Args:
-            username: User's username
+            employee_id: User's employee ID (PF ID)
             password: User's password
             ip_address: Optional IP address for audit logging
         
@@ -36,10 +36,15 @@ class AuthService:
         Raises:
             AuthenticationFailed: If credentials are invalid
         """
-        user = authenticate(username=username, password=password)
+        try:
+            # Fetch user by employee_id
+            user = User.objects.get(employee_id=employee_id)
+        except User.DoesNotExist:
+            raise AuthenticationFailed('Invalid employee ID or password.')
         
-        if not user:
-            raise AuthenticationFailed('Invalid username or password.')
+        # Check if password is correct
+        if not user.check_password(password):
+            raise AuthenticationFailed('Invalid employee ID or password.')
         
         if not user.is_active:
             raise AuthenticationFailed('This user account is inactive.')
@@ -49,7 +54,7 @@ class AuthService:
             user=user,
             action=f'User logged in',
             action_type='LOGIN',
-            metadata={'username': username},
+            metadata={'employee_id': employee_id},
             ip_address=ip_address
         )
         

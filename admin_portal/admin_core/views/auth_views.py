@@ -24,7 +24,7 @@ class LoginView(ViewSet):
     API endpoint for user login.
     
     POST /api/auth/login/
-    - username: str
+    - employee_id: str (PF ID)
     - password: str
     
     Returns:
@@ -37,12 +37,12 @@ class LoginView(ViewSet):
     
     def create(self, request):
         """Handle login request."""
-        username = request.data.get('username')
+        employee_id = request.data.get('employee_id')
         password = request.data.get('password')
         
-        if not username or not password:
+        if not employee_id or not password:
             return Response(
-                {'error': 'Username and password are required.'},
+                {'error': 'Employee ID and password are required.'},
                 status=status.HTTP_400_BAD_REQUEST
             )
         
@@ -51,7 +51,7 @@ class LoginView(ViewSet):
             ip_address = self._get_client_ip(request)
             
             # Authenticate user
-            user = AuthService.authenticate_user(username, password, ip_address)
+            user = AuthService.authenticate_user(employee_id, password, ip_address)
             
             # Generate token
             token = AuthService.generate_token(user)

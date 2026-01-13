@@ -1,0 +1,74 @@
+## Project Structure Explanation
+
+```
+admin_core/
+├── models/                    # Data models
+│   ├── user.py               # Custom User with employee_id, designation, unit, roles
+│   ├── role.py               # Role for RBAC
+│   ├── hierarchy.py          # Unit model with parent-child relationships
+│   ├── workflow.py           # ApprovalRequest for Maker-Checker workflow
+│   ├── audit.py              # AuditLog for tracking all actions
+│
+├── serializers/               # DRF Serializers for validation and conversion
+│   ├── user_serializer.py    # User serialization with nested roles/unit
+│   ├── role_serializer.py    # Simple role serialization
+│   ├── unit_serializer.py    # Unit serialization with hierarchy info
+│   ├── approval_serializer.py # Approval request serialization
+│
+├── services/                  # Business logic layer
+│   ├── auth_service.py       # Authentication, token, password logic
+│   ├── hierarchy_service.py  # Unit hierarchy operations, access control
+│   ├── approval_service.py   # Approval routing, workflow logic
+│
+├── views/                     # API ViewSets
+│   ├── auth_views.py         # Login, Logout, Change Password, Current User
+│   ├── unit_views.py         # Unit CRUD, hierarchy queries
+│   ├── user_views.py         # User CRUD, role assignment
+│   ├── approval_views.py     # Approval CRUD, approve/reject actions
+│
+├── admin.py                   # Django admin interface configuration
+├── urls.py                    # URL routing for the app
+├── management/commands/       # Custom management commands
+│   └── seed_data.py          # Initial data seeding script
+```
+
+
+----------------------------------------------------------------------------------------------------
+
+How to Commit to Git:
+git config --global user.name "innovation2001hub-alt"
+git config --global user.email "innovation2001hub@gmail.com"
+
+git branch -M main
+git remote add origin https://github.com/innovation2001hub-alt/admin_portal.git
+git push -u origin main
+
+
+
+How to Activate Venv:
+PS C:\Users\hp\Desktop\admin_portal> python -m venv venv                                            
+PS C:\Users\hp\Desktop\admin_portal> Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass     
+PS C:\Users\hp\Desktop\admin_portal> .\venv\Scripts\Activate    
+
+
+How to Run Server Backend:
+C:\Users\hp\Desktop\admin_portal\venv\Scripts\python.exe C:\Users\hp\Desktop\admin_portal\admin_portal\manage.py runserver
+
+
+How to run server in Frontend:
+PS C:\Users\hp\Desktop\admin_portal\frontend> npm run dev
+
+How to run Swagger:
+after backend is running-->
+http://127.0.0.1:8000/api/users/
+
+
+Prompts:
+Currently username password is hard coded, i want it to be fetched from database which maintains username and password from the users table. Also the login should be performed on basis of Employee ID i.e. PF ID instead of username and password. So PF ID and password. So add a column of password in user table from where i can add user information and do login accordingly.
+
+I want that when we create a new user at that time only with pf id it asks for a password and using that particular password we can login into the frontend of the login page
+
+
+
+
+

@@ -1,5 +1,27 @@
 from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django import forms
 from .models import User, Unit, Role, ApprovalRequest, AuditLog
+
+
+class CustomUserCreationForm(UserCreationForm):
+    """Custom user creation form with additional fields."""
+    employee_id = forms.CharField(max_length=20, required=True, help_text="Unique employee identifier (PF ID)")
+    designation = forms.CharField(max_length=100, required=True, help_text="Job title or designation")
+    unit = forms.ModelChoiceField(queryset=Unit.objects.all(), required=False, help_text="Organizational unit")
+    email = forms.EmailField(required=True)
+    
+    class Meta:
+        model = User
+        fields = ('username', 'employee_id', 'first_name', 'last_name', 'email', 'designation', 'unit', 'password1', 'password2')
+
+
+class CustomUserChangeForm(UserChangeForm):
+    """Custom user change form."""
+    class Meta:
+        model = User
+        fields = '__all__'
 
 
 @admin.register(Role)
@@ -49,17 +71,22 @@ class UnitAdmin(admin.ModelAdmin):
 
 
 @admin.register(User)
-class UserAdmin(admin.ModelAdmin):
-    """Admin interface for User model."""
-    list_display = ('username', 'get_full_name', 'employee_id', 'designation', 'unit', 'is_active')
-    list_filter = ('is_active', 'unit', 'date_joined')
+class UserAdmin(BaseUserAdmin):
+    """Admin interface for User model with proper password handling."""
+    form = CustomUserChangeForm
+    add_form = CustomUserCreationForm
+    
+    list_display = ('username', 'get_full_name', 'employee_id', 'designation', 'unit', 'get_roles_display', 'is_active')
+    list_filter = ('is_active', 'unit', 'roles', 'date_joined')
     search_fields = ('username', 'first_name', 'last_name', 'email', 'employee_id')
     filter_horizontal = ('roles', 'groups', 'user_permissions')
     readonly_fields = ('date_joined', 'last_login')
+    ordering = ('username',)
     
+    # Fieldsets for editing existing users
     fieldsets = (
         ('User Information', {
-            'fields': ('username', 'first_name', 'last_name', 'email')
+            'fields': ('username', 'password', 'first_name', 'last_name', 'email')
         }),
         ('Employee Information', {
             'fields': ('employee_id', 'designation', 'unit')
@@ -77,6 +104,26 @@ class UserAdmin(admin.ModelAdmin):
         }),
     )
     
+    # Fieldsets for adding new users
+    add_fieldsets = (
+        ('Authentication', {
+            'classes': ('wide',),
+            'fields': ('username', 'password1', 'password2'),
+        }),
+        ('Personal Information', {
+            'classes': ('wide',),
+            'fields': ('first_name', 'last_name', 'email'),
+        }),
+        ('Employee Information', {
+            'classes': ('wide',),
+            'fields': ('employee_id', 'designation', 'unit'),
+        }),
+        ('Permissions', {
+            'classes': ('wide',),
+            'fields': ('is_active', 'is_staff', 'is_superuser'),
+        }),
+    )
+    
     def get_queryset(self, request):
         """Optimize queryset with select_related."""
         qs = super().get_queryset(request)
@@ -86,6 +133,19 @@ class UserAdmin(admin.ModelAdmin):
         """Display user's full name."""
         return obj.get_full_name()
     get_full_name.short_description = 'Full Name'
+    
+    def get_roles_display(self, obj):
+        """Display user's roles as comma-separated list."""
+        return ', '.join([role.name for role in obj.roles.all()])
+    get_roles_display.short_description = 'Roles'
+    
+    def save_model(self, request, obj, form, change):
+        """Save model and handle roles after user creation."""
+        super().save_model(request, obj, form, change)
+        # For new users, we can set default roles here if needed
+        if not change and not obj.roles.exists():
+            # Optionally assign a default role
+            pass
 
 
 @admin.register(ApprovalRequest)

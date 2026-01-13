@@ -570,3 +570,446 @@ INFO 2026-01-12 17:24:15,630 log 13556 13100 "GET /api/docs/ HTTP/1.1" 200 4692
 INFO 2026-01-12 17:24:15,918 log 13556 13100 "GET /api/schema/ HTTP/1.1" 200 116484
 WARNING 2026-01-12 17:25:13,095 log 13556 13100 Bad Request: /api/auth/login/
 WARNING 2026-01-12 17:25:13,096 log 13556 13100 "POST /api/auth/login/ HTTP/1.1" 400 47
+INFO 2026-01-13 12:06:23,889 autoreload 8088 7880 Watching for file changes with StatReloader
+WARNING 2026-01-13 12:07:54,887 log 8088 14416 Not Found: /
+WARNING 2026-01-13 12:07:54,904 log 8088 14416 "GET / HTTP/1.1" 404 2817
+WARNING 2026-01-13 12:07:55,000 log 8088 14416 Not Found: /favicon.ico
+WARNING 2026-01-13 12:07:55,000 log 8088 14416 "GET /favicon.ico HTTP/1.1" 404 2868
+INFO 2026-01-13 12:08:01,737 log 8088 14416 "GET /admin/ HTTP/1.1" 200 11155
+INFO 2026-01-13 12:08:01,754 log 8088 17012 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-01-13 12:08:01,755 log 8088 14416 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-01-13 12:08:01,757 log 8088 14408 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-01-13 12:08:01,761 log 8088 17012 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-01-13 12:08:01,769 log 8088 4564 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-01-13 12:08:01,785 log 8088 4564 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-01-13 12:08:01,786 log 8088 14064 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-01-13 12:08:01,794 log 8088 14064 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-01-13 12:08:01,795 log 8088 4564 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-01-13 12:11:30,817 log 8088 4564 "GET /admin/ HTTP/1.1" 200 11155
+INFO 2026-01-13 12:11:32,838 log 8088 4564 "GET /admin/ HTTP/1.1" 200 11155
+INFO 2026-01-13 12:11:33,350 log 8088 4564 "GET /admin/ HTTP/1.1" 200 11155
+INFO 2026-01-13 12:15:04,544 log 8088 21684 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2026-01-13 12:15:05,215 log 8088 21684 "POST /api/auth/login/ HTTP/1.1" 200 265
+INFO 2026-01-13 12:17:55,444 log 8088 21684 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+INFO 2026-01-13 12:17:55,470 log 8088 21684 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-13 12:18:00,622 log 8088 21684 "POST /api/auth/login/ HTTP/1.1" 200 265
+INFO 2026-01-13 12:18:34,514 log 8088 21684 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-13 12:18:57,186 log 8088 21684 "POST /api/auth/login/ HTTP/1.1" 200 265
+INFO 2026-01-13 12:22:28,123 log 8088 21684 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-13 12:24:55,104 log 8088 21684 "POST /api/auth/login/ HTTP/1.1" 200 265
+WARNING 2026-01-13 12:26:35,531 log 8088 1280 Not Found: /
+WARNING 2026-01-13 12:26:35,532 log 8088 1280 "GET / HTTP/1.1" 404 2817
+INFO 2026-01-13 12:26:37,881 log 8088 1280 "GET /admin/ HTTP/1.1" 200 11155
+INFO 2026-01-13 12:29:51,082 log 8088 1280 "GET /admin/admin_core/role/ HTTP/1.1" 200 16553
+INFO 2026-01-13 12:29:51,106 log 8088 1280 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2026-01-13 12:29:51,113 log 8088 1280 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-01-13 12:29:51,113 log 8088 6136 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2026-01-13 12:29:51,115 log 8088 14220 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-01-13 12:29:51,117 log 8088 1280 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-01-13 12:29:51,122 log 8088 6136 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-01-13 12:29:51,128 log 8088 1280 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2026-01-13 12:29:51,130 log 8088 14220 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2026-01-13 12:29:51,132 log 8088 12096 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-01-13 12:29:51,136 log 8088 22428 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-01-13 12:29:51,140 log 8088 22428 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2026-01-13 12:29:51,150 log 8088 13764 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 12:29:51,163 log 8088 13764 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2026-01-13 12:29:51,164 log 8088 22428 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2026-01-13 12:29:51,164 log 8088 12096 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2026-01-13 12:29:54,843 log 8088 12096 "GET /admin/ HTTP/1.1" 200 11155
+INFO 2026-01-13 12:30:15,221 log 8088 12096 "GET /admin/admin_core/role/ HTTP/1.1" 200 16553
+INFO 2026-01-13 12:30:15,239 log 8088 12096 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 12:33:39,187 log 8088 12096 "GET /admin/admin_core/user/ HTTP/1.1" 200 17584
+INFO 2026-01-13 12:33:39,199 log 8088 22428 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2026-01-13 12:33:39,202 log 8088 12096 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 12:34:46,444 log 8088 12096 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 30975
+INFO 2026-01-13 12:34:46,461 log 8088 12096 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2026-01-13 12:34:46,463 log 8088 1280 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2026-01-13 12:34:46,463 log 8088 14220 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+INFO 2026-01-13 12:34:46,464 log 8088 22428 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 12:34:46,464 log 8088 13764 "GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+INFO 2026-01-13 12:34:46,475 log 8088 22428 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2026-01-13 12:34:46,475 log 8088 13764 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+INFO 2026-01-13 12:34:46,483 log 8088 13764 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2026-01-13 12:34:46,514 log 8088 13764 "GET /static/admin/img/selector-icons.svg HTTP/1.1" 304 0
+INFO 2026-01-13 12:35:53,665 log 8088 13764 "GET /admin/admin_core/user/ HTTP/1.1" 200 17584
+INFO 2026-01-13 12:35:53,678 log 8088 13764 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 12:36:52,113 log 8088 13764 "GET /admin/admin_core/user/ HTTP/1.1" 200 17584
+INFO 2026-01-13 12:36:52,129 log 8088 13764 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 14:38:12,983 autoreload 8088 7880 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\models\user.py changed, reloading.
+INFO 2026-01-13 14:38:13,801 autoreload 2992 21332 Watching for file changes with StatReloader
+INFO 2026-01-13 14:38:19,860 autoreload 2992 21332 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\services\auth_service.py changed, reloading.
+INFO 2026-01-13 14:38:20,582 autoreload 2216 7464 Watching for file changes with StatReloader
+INFO 2026-01-13 14:38:28,708 autoreload 2216 7464 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\views\auth_views.py changed, reloading.
+INFO 2026-01-13 14:38:29,417 autoreload 9012 19288 Watching for file changes with StatReloader
+INFO 2026-01-13 14:40:08,492 log 9012 20456 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+INFO 2026-01-13 14:40:08,539 log 9012 20456 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-13 14:40:59,918 log 9012 20456 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+WARNING 2026-01-13 14:40:59,933 log 9012 20456 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 14:40:59,935 log 9012 20456 "POST /api/auth/login/ HTTP/1.1" 401 44
+WARNING 2026-01-13 14:41:11,415 log 9012 20456 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 14:41:11,417 log 9012 20456 "POST /api/auth/login/ HTTP/1.1" 401 44
+WARNING 2026-01-13 14:41:40,161 log 9012 20456 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 14:41:40,163 log 9012 20456 "POST /api/auth/login/ HTTP/1.1" 401 44
+WARNING 2026-01-13 14:42:52,236 log 9012 20456 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 14:42:52,237 log 9012 20456 "POST /api/auth/login/ HTTP/1.1" 401 44
+WARNING 2026-01-13 14:43:13,985 log 9012 20456 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 14:43:13,987 log 9012 20456 "POST /api/auth/login/ HTTP/1.1" 401 44
+WARNING 2026-01-13 14:45:07,261 log 9012 20456 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 14:45:07,262 log 9012 20456 "POST /api/auth/login/ HTTP/1.1" 401 44
+WARNING 2026-01-13 14:45:21,895 log 9012 20456 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 14:45:21,896 log 9012 20456 "POST /api/auth/login/ HTTP/1.1" 401 44
+WARNING 2026-01-13 14:45:23,432 log 9012 20456 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 14:45:23,433 log 9012 20456 "POST /api/auth/login/ HTTP/1.1" 401 44
+INFO 2026-01-13 14:45:39,778 log 9012 14008 "GET /admin/admin_core/user/ HTTP/1.1" 200 17584
+INFO 2026-01-13 14:45:39,793 log 9012 14008 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 14:45:41,247 log 9012 14008 "GET /admin/admin_core/user/ HTTP/1.1" 200 17584
+INFO 2026-01-13 14:45:41,262 log 9012 14008 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 14:45:41,430 log 9012 14008 "GET /admin/admin_core/user/ HTTP/1.1" 200 17584
+INFO 2026-01-13 14:45:41,442 log 9012 14008 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 14:45:44,696 log 9012 14008 "GET /admin/admin_core/user/ HTTP/1.1" 200 17584
+INFO 2026-01-13 14:45:44,708 log 9012 14008 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2026-01-13 14:47:05,551 log 9012 20456 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 14:47:05,552 log 9012 20456 "POST /api/auth/login/ HTTP/1.1" 401 44
+WARNING 2026-01-13 14:47:06,313 log 9012 20456 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 14:47:06,315 log 9012 20456 "POST /api/auth/login/ HTTP/1.1" 401 44
+WARNING 2026-01-13 14:47:06,709 log 9012 20456 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 14:47:06,711 log 9012 20456 "POST /api/auth/login/ HTTP/1.1" 401 44
+INFO 2026-01-13 14:47:09,479 log 9012 14008 "GET /admin/admin_core/user/ HTTP/1.1" 200 17584
+INFO 2026-01-13 14:47:09,492 log 9012 14008 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 14:47:10,302 log 9012 14008 "GET /admin/admin_core/user/ HTTP/1.1" 200 17584
+INFO 2026-01-13 14:47:10,318 log 9012 14008 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 14:47:10,462 log 9012 14008 "GET /admin/admin_core/user/ HTTP/1.1" 200 17584
+INFO 2026-01-13 14:47:10,474 log 9012 14008 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 14:47:10,631 log 9012 14008 "GET /admin/admin_core/user/ HTTP/1.1" 200 17584
+INFO 2026-01-13 14:47:10,649 log 9012 14008 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 14:47:10,856 log 9012 14008 "GET /admin/admin_core/user/ HTTP/1.1" 200 17584
+INFO 2026-01-13 14:47:10,870 log 9012 14008 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 14:47:17,642 log 9012 14008 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 30983
+INFO 2026-01-13 14:47:17,657 log 9012 14008 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2026-01-13 14:48:27,372 log 9012 20456 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 14:48:27,374 log 9012 20456 "POST /api/auth/login/ HTTP/1.1" 401 44
+WARNING 2026-01-13 14:48:28,204 log 9012 20456 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 14:48:28,205 log 9012 20456 "POST /api/auth/login/ HTTP/1.1" 401 44
+WARNING 2026-01-13 14:48:28,661 log 9012 20456 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 14:48:28,663 log 9012 20456 "POST /api/auth/login/ HTTP/1.1" 401 44
+WARNING 2026-01-13 14:48:31,950 log 9012 20456 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 14:48:31,951 log 9012 20456 "POST /api/auth/login/ HTTP/1.1" 401 44
+INFO 2026-01-13 14:48:37,513 log 9012 14008 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 30983
+INFO 2026-01-13 14:48:37,531 log 9012 14008 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 14:48:38,094 log 9012 14008 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 30983
+INFO 2026-01-13 14:48:38,110 log 9012 14008 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 14:49:20,894 autoreload 7752 17472 Watching for file changes with StatReloader
+WARNING 2026-01-13 14:49:23,731 log 7752 11548 Not Found: /
+WARNING 2026-01-13 14:49:23,732 log 7752 11548 "GET / HTTP/1.1" 404 2817
+INFO 2026-01-13 14:49:29,755 log 7752 11548 "GET /admin/ HTTP/1.1" 200 11155
+INFO 2026-01-13 14:49:35,105 log 7752 11548 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 30983
+INFO 2026-01-13 14:49:35,131 log 7752 11548 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 14:49:43,110 log 7752 11548 "GET /admin/admin_core/user/ HTTP/1.1" 200 17584
+INFO 2026-01-13 14:49:43,132 log 7752 11548 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 14:50:58,810 log 7752 11548 "GET /admin/admin_core/user/1/change/ HTTP/1.1" 200 31279
+INFO 2026-01-13 14:50:58,825 log 7752 11548 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 14:51:05,596 log 7752 11548 "GET /admin/admin_core/user/ HTTP/1.1" 200 17584
+INFO 2026-01-13 14:51:05,610 log 7752 11548 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 14:51:34,697 log 7752 11548 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 30983
+INFO 2026-01-13 14:51:34,712 log 7752 11548 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 14:53:10,444 log 7752 11548 "POST /admin/admin_core/user/add/ HTTP/1.1" 302 0
+INFO 2026-01-13 14:53:10,462 log 7752 11548 "GET /admin/admin_core/user/ HTTP/1.1" 200 18410
+INFO 2026-01-13 14:53:10,476 log 7752 11548 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2026-01-13 14:54:01,097 log 7752 14128 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 14:54:01,098 log 7752 14128 "POST /api/auth/login/ HTTP/1.1" 401 44
+INFO 2026-01-13 15:01:09,957 autoreload 7752 17472 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\models\user.py changed, reloading.
+INFO 2026-01-13 15:01:11,090 autoreload 7876 9620 Watching for file changes with StatReloader
+WARNING 2026-01-13 15:03:49,473 log 7876 8076 Not Found: /
+WARNING 2026-01-13 15:03:49,498 log 7876 8076 "GET / HTTP/1.1" 404 2817
+INFO 2026-01-13 15:03:59,131 log 7876 8076 "GET /admin/ HTTP/1.1" 200 11522
+INFO 2026-01-13 15:04:02,168 log 7876 8076 "GET /admin/admin_core/approvalrequest/ HTTP/1.1" 200 19888
+INFO 2026-01-13 15:04:02,198 log 7876 8076 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:04:07,684 log 7876 8076 "GET /admin/admin_core/role/ HTTP/1.1" 200 16553
+INFO 2026-01-13 15:04:07,699 log 7876 8076 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2026-01-13 15:07:34,246 log 7876 21840 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 15:07:34,248 log 7876 21840 "POST /api/auth/login/ HTTP/1.1" 401 44
+WARNING 2026-01-13 15:07:36,559 log 7876 21840 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 15:07:36,561 log 7876 21840 "POST /api/auth/login/ HTTP/1.1" 401 44
+WARNING 2026-01-13 15:07:37,098 log 7876 21840 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 15:07:37,099 log 7876 21840 "POST /api/auth/login/ HTTP/1.1" 401 44
+WARNING 2026-01-13 15:07:46,910 log 7876 21840 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 15:07:46,912 log 7876 21840 "POST /api/auth/login/ HTTP/1.1" 401 44
+INFO 2026-01-13 15:09:13,783 log 7876 21840 "POST /api/auth/login/ HTTP/1.1" 200 398
+INFO 2026-01-13 15:10:21,738 log 7876 21840 "POST /api/auth/logout/ HTTP/1.1" 200 32
+WARNING 2026-01-13 15:10:50,965 log 7876 21840 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 15:10:50,967 log 7876 21840 "POST /api/auth/login/ HTTP/1.1" 401 44
+WARNING 2026-01-13 15:10:57,964 log 7876 21840 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 15:10:57,966 log 7876 21840 "POST /api/auth/login/ HTTP/1.1" 401 44
+INFO 2026-01-13 15:11:31,313 log 7876 21840 "POST /api/auth/login/ HTTP/1.1" 200 398
+INFO 2026-01-13 15:22:08,912 log 7876 11560 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-13 15:23:02,195 log 7876 3984 "GET /admin/admin_core/role/ HTTP/1.1" 200 16553
+INFO 2026-01-13 15:23:02,208 log 7876 3984 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:23:04,253 log 7876 3984 "GET /admin/admin_core/user/ HTTP/1.1" 200 18189
+INFO 2026-01-13 15:23:04,271 log 7876 3984 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:23:14,473 log 7876 3984 "GET /admin/admin_core/user/ HTTP/1.1" 200 18189
+INFO 2026-01-13 15:23:14,489 log 7876 3984 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:23:17,304 log 7876 3984 "GET /admin/admin_core/user/2/change/ HTTP/1.1" 200 31410
+INFO 2026-01-13 15:23:17,321 log 7876 3984 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:34:50,212 log 7876 14708 "GET /admin/admin_core/user/ HTTP/1.1" 200 18189
+INFO 2026-01-13 15:34:50,226 log 7876 14708 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:34:50,396 log 7876 14708 "GET /admin/admin_core/user/ HTTP/1.1" 200 18189
+INFO 2026-01-13 15:34:50,412 log 7876 14708 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:34:50,818 log 7876 14708 "GET /admin/admin_core/user/ HTTP/1.1" 200 18189
+INFO 2026-01-13 15:34:50,836 log 7876 14708 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:34:51,285 log 7876 14708 "GET /admin/admin_core/user/ HTTP/1.1" 200 18189
+INFO 2026-01-13 15:34:51,299 log 7876 14708 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:34:51,793 log 7876 14708 "GET /admin/admin_core/user/ HTTP/1.1" 200 18189
+INFO 2026-01-13 15:34:51,807 log 7876 14708 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:34:56,038 log 7876 14708 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 30984
+INFO 2026-01-13 15:34:56,054 log 7876 14708 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:35:24,422 autoreload 16060 3156 Watching for file changes with StatReloader
+WARNING 2026-01-13 15:35:30,199 log 16060 17912 Not Found: /
+WARNING 2026-01-13 15:35:30,205 log 16060 17912 "GET / HTTP/1.1" 404 2817
+INFO 2026-01-13 15:35:37,532 log 16060 17912 "GET /admin/ HTTP/1.1" 200 11522
+INFO 2026-01-13 15:35:41,475 log 16060 17912 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 30984
+INFO 2026-01-13 15:35:41,504 log 16060 17912 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2026-01-13 15:36:49,204 log 16060 17912 Not Found: /
+WARNING 2026-01-13 15:36:49,207 log 16060 17912 "GET / HTTP/1.1" 404 2817
+INFO 2026-01-13 15:36:55,337 log 16060 17912 "GET /api/users HTTP/1.1" 301 0
+INFO 2026-01-13 15:36:55,929 log 16060 17912 "GET /api/users/ HTTP/1.1" 200 22635
+INFO 2026-01-13 15:36:56,155 log 16060 17912 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2026-01-13 15:36:56,188 log 16060 11160 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2026-01-13 15:36:56,220 log 16060 13764 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2026-01-13 15:36:56,236 log 16060 8796 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2026-01-13 15:36:56,237 log 16060 17912 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2026-01-13 15:36:56,305 log 16060 10360 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2026-01-13 15:36:56,314 log 16060 8796 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2026-01-13 15:36:56,348 log 16060 13764 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2026-01-13 15:36:56,356 log 16060 17912 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2026-01-13 15:36:56,356 log 16060 10360 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2026-01-13 15:36:56,388 log 16060 10360 "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+INFO 2026-01-13 15:36:56,439 log 16060 11160 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2026-01-13 15:36:56,472 log 16060 3468 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+WARNING 2026-01-13 15:38:18,945 log 16060 3468 Bad Request: /api/users/
+WARNING 2026-01-13 15:38:18,946 log 16060 3468 "POST /api/users/ HTTP/1.1" 400 14585
+WARNING 2026-01-13 15:38:34,910 log 16060 3468 Bad Request: /api/users/
+WARNING 2026-01-13 15:38:34,911 log 16060 3468 "POST /api/users/ HTTP/1.1" 400 14584
+ERROR 2026-01-13 15:38:47,791 log 16060 3468 Internal Server Error: /api/users/
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\views\user_views.py", line 52, in perform_create
+    user_to_create = serializer.save()
+                     ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\rest_framework\serializers.py", line 210, in save
+    self.instance = self.create(validated_data)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\serializers\user_serializer.py", line 146, in create
+    user = User.objects.create_user(password=password, **validated_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\auth\models.py", line 175, in create_user
+    return self._create_user(username, email, password, **extra_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\auth\models.py", line 162, in _create_user
+    user = self._create_user_object(username, email, password, **extra_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\auth\models.py", line 154, in _create_user_object
+    user = self.model(username=username, email=email, **extra_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\db\models\base.py", line 590, in __init__
+    raise TypeError(
+TypeError: User() got unexpected keyword arguments: 'password_confirm'
+ERROR 2026-01-13 15:38:47,805 log 16060 3468 "POST /api/users/ HTTP/1.1" 500 159858
+INFO 2026-01-13 15:40:28,068 autoreload 16060 3156 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\serializers\user_serializer.py changed, reloading.
+INFO 2026-01-13 15:40:28,753 autoreload 3928 13336 Watching for file changes with StatReloader
+INFO 2026-01-13 15:40:39,829 log 3928 22272 "POST /api/users/ HTTP/1.1" 201 15189
+WARNING 2026-01-13 15:41:08,522 log 3928 22272 Bad Request: /api/users/
+WARNING 2026-01-13 15:41:08,525 log 3928 22272 "POST /api/users/ HTTP/1.1" 400 14825
+INFO 2026-01-13 15:41:32,017 log 3928 22272 "POST /api/users/ HTTP/1.1" 201 15008
+INFO 2026-01-13 15:41:57,566 log 3928 15644 "POST /api/auth/login/ HTTP/1.1" 200 344
+INFO 2026-01-13 15:43:23,210 log 3928 22272 "GET /admin/admin_core/user/ HTTP/1.1" 200 19309
+INFO 2026-01-13 15:43:23,230 log 3928 22272 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:43:25,847 log 3928 22272 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 30984
+INFO 2026-01-13 15:43:25,873 log 3928 22272 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:45:46,419 autoreload 3928 13336 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py changed, reloading.
+INFO 2026-01-13 15:45:47,146 autoreload 7224 9324 Watching for file changes with StatReloader
+INFO 2026-01-13 15:45:51,950 autoreload 7224 9324 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py changed, reloading.
+INFO 2026-01-13 15:45:52,706 autoreload 6276 19056 Watching for file changes with StatReloader
+INFO 2026-01-13 15:46:03,925 autoreload 6276 19056 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py changed, reloading.
+INFO 2026-01-13 15:46:04,661 autoreload 22300 608 Watching for file changes with StatReloader
+INFO 2026-01-13 15:49:01,495 log 22300 16444 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 22258
+INFO 2026-01-13 15:49:01,507 log 22300 10980 "GET /static/admin/css/unusable_password_field.css HTTP/1.1" 304 0
+INFO 2026-01-13 15:49:01,519 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:49:58,827 log 22300 16444 "GET /admin/admin_core/user/ HTTP/1.1" 200 20542
+INFO 2026-01-13 15:49:58,845 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:15,534 log 22300 16444 "GET /admin/admin_core/user/ HTTP/1.1" 200 20542
+INFO 2026-01-13 15:50:15,550 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:16,021 log 22300 16444 "GET /admin/admin_core/user/ HTTP/1.1" 200 20542
+INFO 2026-01-13 15:50:16,035 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:16,213 log 22300 16444 "GET /admin/admin_core/user/ HTTP/1.1" 200 20542
+INFO 2026-01-13 15:50:16,237 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:16,384 log 22300 16444 "GET /admin/admin_core/user/ HTTP/1.1" 200 20542
+INFO 2026-01-13 15:50:16,408 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:16,523 log 22300 16444 "GET /admin/admin_core/user/ HTTP/1.1" 200 20542
+INFO 2026-01-13 15:50:16,538 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:18,981 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:18,998 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:34,004 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:34,018 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:34,159 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:34,176 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:34,315 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:34,332 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:34,445 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:34,460 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:34,591 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:34,609 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:34,749 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:34,765 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:34,891 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:34,907 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:35,021 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:35,036 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:35,199 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:35,220 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:35,349 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:35,368 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:36,037 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:36,053 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:36,167 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:36,181 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:36,298 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:36,316 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:36,446 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:36,461 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:36,606 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:36,624 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:36,816 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:36,842 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:37,047 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:37,078 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:37,322 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:37,351 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:37,611 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:37,636 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:37,894 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:37,909 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:38,239 log 22300 16444 "GET /admin/admin_core/user/6/change/ HTTP/1.1" 200 32542
+INFO 2026-01-13 15:50:38,254 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:50:41,021 log 22300 16444 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 22258
+INFO 2026-01-13 15:50:41,039 log 22300 16444 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2026-01-13 15:56:47,303 log 22300 8088 Bad Request: /api/users/
+WARNING 2026-01-13 15:56:47,304 log 22300 8088 "POST /api/users/ HTTP/1.1" 400 14833
+INFO 2026-01-13 15:57:52,534 log 22300 8088 "GET /admin/admin_core/user/ HTTP/1.1" 200 20542
+INFO 2026-01-13 15:57:52,549 log 22300 8088 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 15:59:59,208 log 22300 8088 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 22258
+INFO 2026-01-13 15:59:59,223 log 22300 8088 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 16:09:15,480 log 22300 19400 "POST /admin/admin_core/user/add/ HTTP/1.1" 302 0
+INFO 2026-01-13 16:09:15,616 log 22300 19400 "GET /admin/admin_core/user/8/change/ HTTP/1.1" 200 32813
+INFO 2026-01-13 16:09:15,639 log 22300 19400 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 16:10:43,331 log 22300 19400 "POST /admin/admin_core/user/8/change/ HTTP/1.1" 302 0
+INFO 2026-01-13 16:10:43,388 log 22300 19400 "GET /admin/admin_core/user/ HTTP/1.1" 200 21418
+INFO 2026-01-13 16:10:43,409 log 22300 19400 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 16:10:54,171 log 22300 19400 "GET /admin/admin_core/user/ HTTP/1.1" 200 21196
+INFO 2026-01-13 16:10:54,185 log 22300 19400 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 16:11:00,240 log 22300 22164 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-13 16:11:19,575 log 22300 22164 "POST /api/auth/login/ HTTP/1.1" 200 443
+INFO 2026-01-13 16:12:29,171 log 22300 19400 "GET /admin/admin_core/role/ HTTP/1.1" 200 16553
+INFO 2026-01-13 16:12:29,185 log 22300 19400 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 16:12:45,980 log 22300 19400 "GET /admin/admin_core/unit/ HTTP/1.1" 200 20462
+INFO 2026-01-13 16:12:45,995 log 22300 19400 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 16:12:52,073 log 22300 19400 "GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 12241
+INFO 2026-01-13 16:12:59,668 log 22300 19400 "GET /admin/authtoken/tokenproxy/8/change/ HTTP/1.1" 200 13026
+INFO 2026-01-13 16:12:59,688 log 22300 19400 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 16:13:08,755 log 22300 19400 "GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 12241
+INFO 2026-01-13 16:13:13,449 log 22300 19400 "GET /admin/auth/group/ HTTP/1.1" 200 12359
+INFO 2026-01-13 16:13:13,466 log 22300 19400 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 16:13:20,001 log 22300 19400 "GET /admin/admin_core/approvalrequest/ HTTP/1.1" 200 19888
+INFO 2026-01-13 16:13:20,020 log 22300 19400 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 16:16:07,226 log 22300 19400 "GET /api/docs HTTP/1.1" 301 0
+INFO 2026-01-13 16:16:07,343 log 22300 19400 "GET /api/docs/ HTTP/1.1" 200 4692
+INFO 2026-01-13 16:16:07,765 log 22300 19400 "GET /api/schema/ HTTP/1.1" 200 116532
+INFO 2026-01-13 16:50:31,333 log 22300 20156 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 22258
+INFO 2026-01-13 16:50:31,354 log 22300 20156 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 16:56:13,473 log 22300 16304 "POST /admin/admin_core/user/add/ HTTP/1.1" 200 22698
+INFO 2026-01-13 16:56:13,491 log 22300 16304 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 16:57:58,020 log 22300 16304 "POST /admin/admin_core/user/add/ HTTP/1.1" 200 22681
+INFO 2026-01-13 16:57:58,034 log 22300 16304 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 16:58:42,881 log 22300 16304 "POST /admin/admin_core/user/add/ HTTP/1.1" 200 22609
+INFO 2026-01-13 16:58:42,895 log 22300 16304 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 16:58:50,684 log 22300 16304 "POST /admin/admin_core/user/add/ HTTP/1.1" 200 22609
+INFO 2026-01-13 16:58:50,700 log 22300 16304 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 17:02:04,082 log 22300 16304 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 22258
+INFO 2026-01-13 17:02:04,098 log 22300 16304 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 17:02:08,138 log 22300 16304 "GET /admin/admin_core/user/ HTTP/1.1" 200 21196
+INFO 2026-01-13 17:02:08,156 log 22300 16304 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 18:02:38,124 log 22300 9600 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+INFO 2026-01-13 18:02:38,154 log 22300 9600 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-13 18:02:47,164 log 22300 9292 "GET /admin/admin_core/user/ HTTP/1.1" 200 21196
+INFO 2026-01-13 18:02:47,190 log 22300 9292 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 18:03:00,141 log 22300 9600 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+WARNING 2026-01-13 18:03:02,542 log 22300 9600 Unauthorized: /api/auth/login/
+WARNING 2026-01-13 18:03:02,544 log 22300 9600 "POST /api/auth/login/ HTTP/1.1" 401 44
+INFO 2026-01-13 18:03:15,814 log 22300 9292 "GET /admin/admin_core/user/8/change/ HTTP/1.1" 200 32597
+INFO 2026-01-13 18:03:15,830 log 22300 9292 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 18:04:50,154 log 22300 9292 "GET /admin/admin_core/user/8/password/ HTTP/1.1" 200 11853
+INFO 2026-01-13 18:05:22,646 log 22300 9292 "POST /admin/admin_core/user/8/password/ HTTP/1.1" 302 0
+INFO 2026-01-13 18:05:22,744 log 22300 9292 "GET /admin/admin_core/user/8/change/ HTTP/1.1" 200 32733
+INFO 2026-01-13 18:05:22,764 log 22300 9292 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 18:05:36,889 log 22300 9600 "POST /api/auth/login/ HTTP/1.1" 200 443
+INFO 2026-01-13 18:10:08,232 log 22300 9292 "GET /admin/admin_core/user/ HTTP/1.1" 200 21196
+INFO 2026-01-13 18:10:08,250 log 22300 9292 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 18:12:14,439 log 22300 9292 "POST /admin/admin_core/user/ HTTP/1.1" 200 11739
+INFO 2026-01-13 18:12:14,583 log 22300 9292 "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2026-01-13 18:12:20,708 log 22300 9292 "POST /admin/admin_core/user/ HTTP/1.1" 302 0
+INFO 2026-01-13 18:12:20,755 log 22300 9292 "GET /admin/admin_core/user/ HTTP/1.1" 200 18191
+INFO 2026-01-13 18:12:20,772 log 22300 9292 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 18:12:34,831 log 22300 9292 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 22258
+INFO 2026-01-13 18:12:34,849 log 22300 9292 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 18:12:57,327 log 22300 9292 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 22258
+INFO 2026-01-13 18:12:57,341 log 22300 9292 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 18:13:07,956 log 22300 9292 "POST /api/users/ HTTP/1.1" 201 15008
+INFO 2026-01-13 18:15:00,011 log 22300 9292 "POST /api/users/ HTTP/1.1" 201 15217
+WARNING 2026-01-13 18:15:29,041 log 22300 4696 Unauthorized: /api/auth/logout/
+WARNING 2026-01-13 18:15:29,043 log 22300 4696 "POST /api/auth/logout/ HTTP/1.1" 401 27
+INFO 2026-01-13 18:15:52,473 log 22300 4696 "POST /api/auth/login/ HTTP/1.1" 200 431
+INFO 2026-01-13 18:18:20,760 log 22300 9292 "GET /admin/admin_core/auditlog/ HTTP/1.1" 200 28455
+WARNING 2026-01-13 18:19:16,607 log 22300 9292 Not Found: /
+WARNING 2026-01-13 18:19:16,610 log 22300 9292 "GET / HTTP/1.1" 404 2817
+INFO 2026-01-13 18:19:19,291 log 22300 9292 "GET /admin/admin_core/auditlog/ HTTP/1.1" 200 28455
+INFO 2026-01-13 18:20:00,948 log 22300 9292 "GET /admin/admin_core/unit/ HTTP/1.1" 200 20462
+INFO 2026-01-13 18:20:00,975 log 22300 9292 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 18:20:04,904 log 22300 9292 "GET /admin/admin_core/user/ HTTP/1.1" 200 19292
+INFO 2026-01-13 18:20:04,928 log 22300 9292 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-13 18:20:09,045 log 22300 9292 "GET /admin/admin_core/user/ HTTP/1.1" 200 19292
+INFO 2026-01-13 18:20:09,066 log 22300 9292 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+WARNING 2026-01-13 18:34:22,319 log 22300 21684 Bad Request: /api/auth/login/
+WARNING 2026-01-13 18:34:22,320 log 22300 21684 "POST /api/auth/login/ HTTP/1.1" 400 50
+WARNING 2026-01-13 18:34:37,744 log 22300 21684 Unauthorized: /api/auth/current-user/
+WARNING 2026-01-13 18:34:37,745 log 22300 21684 "GET /api/auth/current-user/ HTTP/1.1" 401 58
+WARNING 2026-01-13 18:34:39,735 log 22300 21684 Unauthorized: /api/auth/current-user/
+WARNING 2026-01-13 18:34:39,735 log 22300 21684 "GET /api/auth/current-user/ HTTP/1.1" 401 58
+WARNING 2026-01-13 18:34:51,998 log 22300 21684 Unauthorized: /api/auth/current-user/
+WARNING 2026-01-13 18:34:51,998 log 22300 21684 "GET /api/auth/current-user/ HTTP/1.1" 401 58
+WARNING 2026-01-13 18:34:52,646 log 22300 21684 Unauthorized: /api/auth/current-user/
+WARNING 2026-01-13 18:34:52,648 log 22300 21684 "GET /api/auth/current-user/ HTTP/1.1" 401 58
+INFO 2026-01-13 18:36:30,117 autoreload 22300 608 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py changed, reloading.
+INFO 2026-01-13 18:36:30,854 autoreload 14872 22140 Watching for file changes with StatReloader

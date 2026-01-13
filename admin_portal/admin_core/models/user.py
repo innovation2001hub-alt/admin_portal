@@ -7,12 +7,13 @@ class User(AbstractUser):
     Custom User model extending AbstractUser with additional fields for admin portal.
     
     Fields:
-    - employee_id: Unique identifier for the employee
+    - employee_id: Unique identifier for the employee (PF ID)
+    - password: User password for authentication
     - designation: Job title/designation of the user
     - unit: The organizational unit (Unit) the user belongs to
     - roles: Many-to-many relationship with roles for RBAC
     """
-    employee_id = models.CharField(max_length=20, unique=True, help_text="Unique employee identifier")
+    employee_id = models.CharField(max_length=20, unique=True, help_text="Unique employee identifier (PF ID)")
     designation = models.CharField(max_length=100, help_text="Job title or designation")
     unit = models.ForeignKey(
         'Unit',

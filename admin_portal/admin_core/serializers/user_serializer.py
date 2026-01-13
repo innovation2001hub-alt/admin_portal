@@ -141,6 +141,7 @@ class UserSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         """Create user with hashed password."""
         password = validated_data.pop('password')
+        validated_data.pop('password_confirm', None)  # Remove password_confirm as it's not a model field
         roles = validated_data.pop('roles', [])
         
         user = User.objects.create_user(password=password, **validated_data)

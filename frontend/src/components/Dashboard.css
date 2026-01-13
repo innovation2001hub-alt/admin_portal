@@ -47,6 +47,7 @@
 
 .welcome-card,
 .user-info-card,
+.roles-card,
 .placeholder-card {
   background: white;
   border-radius: 12px;
@@ -113,4 +114,84 @@
 
 .placeholder-card li {
   margin: 8px 0;
+}
+
+/* Roles Card Styles */
+.roles-card {
+  border: 2px solid #e0e7ff;
+}
+
+.roles-card h3 {
+  color: #333;
+  font-size: 20px;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+}
+
+.roles-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.role-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.role-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
+}
+
+.role-name {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.roles-description {
+  background: #f8f9ff;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.roles-description p {
+  color: #555;
+  margin: 0 0 12px 0;
+  font-size: 14px;
+}
+
+.roles-description ul {
+  margin: 0;
+  padding-left: 24px;
+  color: #666;
+}
+
+.roles-description li {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.roles-card.no-roles {
+  border: 2px solid #fef3c7;
+  background: #fffbeb;
+}
+
+.roles-card.no-roles h3 {
+  color: #92400e;
+}
+
+.roles-card.no-roles p {
+  color: #78350f;
+  margin: 0;
 }

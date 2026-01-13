@@ -27,10 +27,10 @@ api.interceptors.request.use(
 // Auth API
 export const authAPI = {
   // Login
-  login: async (username, password) => {
+  login: async (employeeId, password) => {
     try {
       const response = await api.post('/auth/login/', {
-        username,
+        employee_id: employeeId,
         password,
       });
       
