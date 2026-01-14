@@ -3,7 +3,7 @@ import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import './Dashboard.css';
 
-const Dashboard = () => {
+const Dashboard = ({ roleTitle = 'Dashboard', color = '#1f6feb', highlights = [] }) => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 
@@ -14,17 +14,17 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-      <div className="dashboard-header">
-        <h1>Admin Portal Dashboard</h1>
+      <div className="dashboard-header" style={{ borderBottomColor: color }}>
+        <h1 style={{ color }}>{roleTitle} Dashboard</h1>
         <button onClick={handleLogout} className="logout-button">
           Logout
         </button>
       </div>
 
       <div className="dashboard-content">
-        <div className="welcome-card">
+        <div className="welcome-card" style={{ borderLeftColor: color }}>
           <h2>Welcome back, {user?.first_name || user?.username}! 👋</h2>
-          <p>You have successfully logged in to the Admin Portal.</p>
+          <p>You are signed in as <strong>{roleTitle}</strong>.</p>
         </div>
 
         <div className="user-info-card">
@@ -87,14 +87,13 @@ const Dashboard = () => {
           </div>
         )}
 
-        <div className="placeholder-card">
-          <h3>Coming Soon</h3>
-          <p>More features will be added here:</p>
+        <div className="placeholder-card" style={{ borderTopColor: color }}>
+          <h3>Focus Areas</h3>
+          <p>Key actions for your role:</p>
           <ul>
-            <li>User Management</li>
-            <li>Unit Hierarchy</li>
-            <li>Approval Requests</li>
-            <li>Audit Logs</li>
+            {highlights.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
           </ul>
         </div>
       </div>

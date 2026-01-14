@@ -1013,3 +1013,1051 @@ WARNING 2026-01-13 18:34:52,646 log 22300 21684 Unauthorized: /api/auth/current-
 WARNING 2026-01-13 18:34:52,648 log 22300 21684 "GET /api/auth/current-user/ HTTP/1.1" 401 58
 INFO 2026-01-13 18:36:30,117 autoreload 22300 608 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py changed, reloading.
 INFO 2026-01-13 18:36:30,854 autoreload 14872 22140 Watching for file changes with StatReloader
+INFO 2026-01-13 18:41:47,947 log 14872 19796 "GET /api/docs/ HTTP/1.1" 200 4692
+INFO 2026-01-13 18:41:48,193 log 14872 19796 "GET /api/schema/ HTTP/1.1" 200 116532
+WARNING 2026-01-13 18:43:50,363 log 14872 19796 Bad Request: /api/auth/login/
+WARNING 2026-01-13 18:43:50,364 log 14872 19796 "POST /api/auth/login/ HTTP/1.1" 400 50
+INFO 2026-01-14 10:59:40,832 autoreload 13868 14764 Watching for file changes with StatReloader
+WARNING 2026-01-14 10:59:44,265 log 13868 10820 Not Found: /
+WARNING 2026-01-14 10:59:44,352 log 13868 10820 "GET / HTTP/1.1" 404 2817
+WARNING 2026-01-14 10:59:44,505 log 13868 10820 Not Found: /favicon.ico
+WARNING 2026-01-14 10:59:44,506 log 13868 10820 "GET /favicon.ico HTTP/1.1" 404 2868
+INFO 2026-01-14 10:59:50,342 log 13868 10820 "GET /admin/ HTTP/1.1" 200 13508
+INFO 2026-01-14 10:59:50,354 log 13868 17576 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-01-14 10:59:50,355 log 13868 10820 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-01-14 10:59:50,362 log 13868 17576 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-01-14 10:59:50,377 log 13868 17576 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-01-14 10:59:50,377 log 13868 13372 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-01-14 10:59:50,381 log 13868 20000 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-01-14 10:59:50,387 log 13868 8072 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-01-14 10:59:50,394 log 13868 8072 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2026-01-14 10:59:50,394 log 13868 13372 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+INFO 2026-01-14 10:59:50,394 log 13868 20000 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:19,603 log 13868 20000 "GET /admin/admin_core/user/ HTTP/1.1" 200 19292
+INFO 2026-01-14 11:03:19,623 log 13868 20000 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:19,626 log 13868 8072 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:19,626 log 13868 10820 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:19,627 log 13868 17576 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:19,633 log 13868 10820 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:19,634 log 13868 20000 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:19,634 log 13868 8072 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:19,638 log 13868 21792 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:19,639 log 13868 17576 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:19,641 log 13868 13372 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 11:03:19,649 log 13868 20000 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:19,649 log 13868 8072 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:19,655 log 13868 8072 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:19,662 log 13868 8072 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:19,663 log 13868 20000 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:19,665 log 13868 13372 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:26,796 log 13868 7252 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2026-01-14 11:03:28,789 log 13868 7252 "POST /api/auth/login/ HTTP/1.1" 200 398
+INFO 2026-01-14 11:03:48,644 log 13868 13372 "GET /admin/admin_core/role/ HTTP/1.1" 200 16553
+INFO 2026-01-14 11:03:48,661 log 13868 13372 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 11:03:56,072 log 13868 13372 "GET /admin/admin_core/role/add/ HTTP/1.1" 200 13920
+INFO 2026-01-14 11:03:56,083 log 13868 13372 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:56,083 log 13868 20000 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:56,091 log 13868 13372 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:56,092 log 13868 20000 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:03:56,094 log 13868 8072 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 11:05:22,482 log 13868 8072 "GET /admin/admin_core/role/ HTTP/1.1" 200 16553
+INFO 2026-01-14 11:05:22,498 log 13868 8072 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 11:06:49,973 log 13868 8072 "GET /admin/admin_core/role/ HTTP/1.1" 200 16553
+INFO 2026-01-14 11:06:49,991 log 13868 8072 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 11:06:55,712 log 13868 8072 "GET /admin/admin_core/role/ HTTP/1.1" 200 16553
+INFO 2026-01-14 11:06:55,725 log 13868 8072 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 11:07:00,209 log 13868 8072 "GET /admin/admin_core/user/ HTTP/1.1" 200 19292
+INFO 2026-01-14 11:07:00,224 log 13868 8072 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 11:07:02,147 log 13868 8072 "GET /admin/admin_core/user/9/change/ HTTP/1.1" 200 32550
+INFO 2026-01-14 11:07:02,162 log 13868 20000 "GET /static/admin/js/SelectBox.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:07:02,163 log 13868 13372 "GET /static/admin/js/SelectFilter2.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:07:02,164 log 13868 8072 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 11:07:02,212 log 13868 8072 "GET /static/admin/img/selector-icons.svg HTTP/1.1" 304 0
+INFO 2026-01-14 11:17:21,694 autoreload 13868 14764 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_portal\urls.py changed, reloading.
+INFO 2026-01-14 11:17:22,404 autoreload 10520 1824 Watching for file changes with StatReloader
+INFO 2026-01-14 11:17:25,054 autoreload 10520 1824 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_portal\settings.py changed, reloading.
+INFO 2026-01-14 11:17:25,752 autoreload 14392 3716 Watching for file changes with StatReloader
+INFO 2026-01-14 11:18:57,988 log 14392 6076 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+INFO 2026-01-14 11:18:58,027 log 14392 6076 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-14 11:19:04,753 log 14392 12344 "GET /admin/admin_core/auditlog/ HTTP/1.1" 200 29067
+INFO 2026-01-14 11:19:13,956 log 14392 12344 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 22258
+INFO 2026-01-14 11:19:13,970 log 14392 17236 "GET /static/admin/css/unusable_password_field.css HTTP/1.1" 304 0
+INFO 2026-01-14 11:19:13,973 log 14392 12344 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 11:19:18,832 log 14392 12344 "GET /admin/admin_core/role/ HTTP/1.1" 200 16553
+INFO 2026-01-14 11:19:18,852 log 14392 12344 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 11:19:22,401 log 14392 12344 "GET /admin/admin_core/role/add/ HTTP/1.1" 200 13920
+INFO 2026-01-14 11:19:22,415 log 14392 12344 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 11:19:25,033 log 14392 12344 "GET /admin/admin_core/role/ HTTP/1.1" 200 16553
+INFO 2026-01-14 11:19:25,045 log 14392 12344 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 11:21:15,824 log 14392 12344 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 22258
+INFO 2026-01-14 11:21:15,837 log 14392 12344 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 11:21:30,551 log 14392 12344 "GET /admin/admin_core/role/ HTTP/1.1" 200 16553
+INFO 2026-01-14 11:21:30,564 log 14392 12344 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 11:21:37,267 log 14392 12344 "GET /admin/admin_core/user/ HTTP/1.1" 200 19292
+INFO 2026-01-14 11:21:37,283 log 14392 12344 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 11:21:39,055 log 14392 12344 "GET /admin/admin_core/user/9/change/ HTTP/1.1" 200 32550
+INFO 2026-01-14 11:21:39,071 log 14392 12344 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 11:21:46,928 log 14392 12344 "GET /admin/admin_core/user/ HTTP/1.1" 200 19292
+INFO 2026-01-14 11:21:46,943 log 14392 12344 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 11:22:18,244 log 14392 12344 "GET /api/users/ HTTP/1.1" 200 22398
+INFO 2026-01-14 11:22:18,260 log 14392 12344 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2026-01-14 11:22:18,260 log 14392 17236 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2026-01-14 11:22:18,265 log 14392 12344 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2026-01-14 11:22:18,269 log 14392 17236 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:22:18,273 log 14392 12344 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:22:18,279 log 14392 17236 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:22:18,280 log 14392 12344 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:22:18,285 log 14392 19516 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2026-01-14 11:22:18,291 log 14392 5876 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:22:18,293 log 14392 19516 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2026-01-14 11:22:18,301 log 14392 5648 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:22:18,301 log 14392 9796 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2026-01-14 11:22:18,327 log 14392 5648 "GET /static/rest_framework/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 304 0
+INFO 2026-01-14 12:11:42,632 autoreload 14392 3716 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py changed, reloading.
+INFO 2026-01-14 12:11:43,459 autoreload 5788 7908 Watching for file changes with StatReloader
+INFO 2026-01-14 12:11:47,257 autoreload 5788 7908 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py changed, reloading.
+INFO 2026-01-14 12:11:47,970 autoreload 6748 1588 Watching for file changes with StatReloader
+INFO 2026-01-14 12:11:50,617 autoreload 6748 1588 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py changed, reloading.
+INFO 2026-01-14 12:11:51,306 autoreload 7376 17208 Watching for file changes with StatReloader
+INFO 2026-01-14 12:11:53,890 autoreload 7376 17208 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py changed, reloading.
+INFO 2026-01-14 12:11:54,618 autoreload 15260 9200 Watching for file changes with StatReloader
+INFO 2026-01-14 12:12:03,529 autoreload 15260 9200 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py changed, reloading.
+INFO 2026-01-14 12:12:04,287 autoreload 2712 17164 Watching for file changes with StatReloader
+INFO 2026-01-14 12:12:10,076 autoreload 2712 17164 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\apps.py changed, reloading.
+INFO 2026-01-14 12:12:10,828 autoreload 9220 12404 Watching for file changes with StatReloader
+ERROR 2026-01-14 12:14:29,076 log 9220 10400 Internal Server Error: /admin/admin_core/user/
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\db\models\options.py", line 684, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'get_dashboard_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\utils.py", line 293, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\utils.py", line 333, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\db\models\options.py", line 686, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: User has no field named 'get_dashboard_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\core\handlers\base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 66, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 66, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\base.py", line 47, in render
+    return super().render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\library.py", line 363, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 357, in result_list
+    "results": list(results(cl)),
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 333, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 324, in __init__
+    super().__init__(*items)
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 221, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\utils.py", line 302, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py", line 197, in get_dashboard_link
+    return format_html('<span style="color:#f44336;">No role</span>')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\utils\html.py", line 137, in format_html
+    raise TypeError("args or kwargs must be provided.")
+TypeError: args or kwargs must be provided.
+ERROR 2026-01-14 12:14:29,086 log 9220 10400 "GET /admin/admin_core/user/ HTTP/1.1" 500 390471
+ERROR 2026-01-14 12:35:53,511 log 9220 12848 Internal Server Error: /admin/admin_core/user/
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\db\models\options.py", line 684, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'get_dashboard_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\utils.py", line 293, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\utils.py", line 333, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\db\models\options.py", line 686, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: User has no field named 'get_dashboard_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\core\handlers\base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 66, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 66, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\base.py", line 47, in render
+    return super().render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\library.py", line 363, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 357, in result_list
+    "results": list(results(cl)),
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 333, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 324, in __init__
+    super().__init__(*items)
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 221, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\utils.py", line 302, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py", line 197, in get_dashboard_link
+    return format_html('<span style="color:#f44336;">No role</span>')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\utils\html.py", line 137, in format_html
+    raise TypeError("args or kwargs must be provided.")
+TypeError: args or kwargs must be provided.
+ERROR 2026-01-14 12:35:53,516 log 9220 12848 "GET /admin/admin_core/user/ HTTP/1.1" 500 390471
+ERROR 2026-01-14 12:35:53,687 log 9220 12848 Internal Server Error: /admin/admin_core/user/
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\db\models\options.py", line 684, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'get_dashboard_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\utils.py", line 293, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\utils.py", line 333, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\db\models\options.py", line 686, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: User has no field named 'get_dashboard_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\core\handlers\base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 66, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 66, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\base.py", line 47, in render
+    return super().render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\library.py", line 363, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 357, in result_list
+    "results": list(results(cl)),
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 333, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 324, in __init__
+    super().__init__(*items)
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 221, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\utils.py", line 302, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py", line 197, in get_dashboard_link
+    return format_html('<span style="color:#f44336;">No role</span>')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\utils\html.py", line 137, in format_html
+    raise TypeError("args or kwargs must be provided.")
+TypeError: args or kwargs must be provided.
+ERROR 2026-01-14 12:35:53,697 log 9220 12848 "GET /admin/admin_core/user/ HTTP/1.1" 500 390471
+ERROR 2026-01-14 12:35:53,845 log 9220 12848 Internal Server Error: /admin/admin_core/user/
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\db\models\options.py", line 684, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'get_dashboard_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\utils.py", line 293, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\utils.py", line 333, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\db\models\options.py", line 686, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: User has no field named 'get_dashboard_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\core\handlers\base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 66, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 66, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\base.py", line 47, in render
+    return super().render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\library.py", line 363, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 357, in result_list
+    "results": list(results(cl)),
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 333, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 324, in __init__
+    super().__init__(*items)
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 221, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\utils.py", line 302, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py", line 197, in get_dashboard_link
+    return format_html('<span style="color:#f44336;">No role</span>')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\utils\html.py", line 137, in format_html
+    raise TypeError("args or kwargs must be provided.")
+TypeError: args or kwargs must be provided.
+ERROR 2026-01-14 12:35:53,851 log 9220 12848 "GET /admin/admin_core/user/ HTTP/1.1" 500 390471
+INFO 2026-01-14 12:36:05,159 autoreload 6868 2292 Watching for file changes with StatReloader
+WARNING 2026-01-14 12:36:08,711 log 6868 9436 Not Found: /
+WARNING 2026-01-14 12:36:08,713 log 6868 9436 "GET / HTTP/1.1" 404 3698
+INFO 2026-01-14 12:36:21,820 log 6868 9436 "GET /admin/ HTTP/1.1" 200 13502
+ERROR 2026-01-14 12:36:26,775 log 6868 9436 Internal Server Error: /admin/admin_core/user/
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\db\models\options.py", line 684, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'get_dashboard_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\utils.py", line 293, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\utils.py", line 333, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\db\models\options.py", line 686, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: User has no field named 'get_dashboard_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\core\handlers\base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 66, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 66, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\base.py", line 47, in render
+    return super().render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\library.py", line 363, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 357, in result_list
+    "results": list(results(cl)),
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 333, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 324, in __init__
+    super().__init__(*items)
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 221, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\utils.py", line 302, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py", line 197, in get_dashboard_link
+    return format_html('<span style="color:#f44336;">No role</span>')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\utils\html.py", line 137, in format_html
+    raise TypeError("args or kwargs must be provided.")
+TypeError: args or kwargs must be provided.
+ERROR 2026-01-14 12:36:26,824 log 6868 9436 "GET /admin/admin_core/user/ HTTP/1.1" 500 390309
+INFO 2026-01-14 12:38:09,613 autoreload 6868 2292 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py changed, reloading.
+INFO 2026-01-14 12:38:10,372 autoreload 1336 15020 Watching for file changes with StatReloader
+INFO 2026-01-14 12:38:45,420 autoreload 16716 16100 Watching for file changes with StatReloader
+WARNING 2026-01-14 12:38:51,697 log 16716 8336 Not Found: /
+WARNING 2026-01-14 12:38:51,700 log 16716 8336 "GET / HTTP/1.1" 404 3698
+INFO 2026-01-14 12:38:56,354 log 16716 8336 "GET /admin/ HTTP/1.1" 200 13502
+INFO 2026-01-14 12:38:59,247 log 16716 8336 "GET /admin/admin_core/user/ HTTP/1.1" 200 21172
+INFO 2026-01-14 12:38:59,278 log 16716 8336 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:39:11,556 log 16716 8336 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 22244
+INFO 2026-01-14 12:39:11,575 log 16716 8336 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:40:47,495 log 16716 8336 "POST /admin/admin_core/user/add/ HTTP/1.1" 200 22583
+INFO 2026-01-14 12:40:47,514 log 16716 8336 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:41:21,037 log 16716 8336 "POST /admin/admin_core/user/add/ HTTP/1.1" 302 0
+ERROR 2026-01-14 12:41:21,486 log 16716 8336 Internal Server Error: /admin/admin_core/user/11/change/
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\db\models\options.py", line 684, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'get_role_info'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\utils.py", line 293, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\utils.py", line 333, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\db\models\options.py", line 686, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: User has no field named 'get_role_info'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\core\handlers\base.py", line 221, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 174, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 160, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 66, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 66, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\defaulttags.py", line 249, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\loader_tags.py", line 211, in render
+    return template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 176, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 166, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\defaulttags.py", line 249, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\defaulttags.py", line 249, in render
+    nodelist.append(node.render_annotated(context))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\defaulttags.py", line 333, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\defaulttags.py", line 333, in render
+    return nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1091, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1052, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1150, in render
+    output = self.filter_expression.resolve(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 788, in resolve
+    obj = self.var.resolve(context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 928, in resolve
+    value = self._resolve_lookup(context)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\template\base.py", line 1000, in _resolve_lookup
+    current = current()
+              ^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\helpers.py", line 278, in contents
+    f, attr, value = lookup_field(field, obj, model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\contrib\admin\utils.py", line 302, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py", line 184, in get_role_info
+    return format_html('<em style="color:#f44336;">No roles assigned</em>')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Desktop\admin_portal\venv\Lib\site-packages\django\utils\html.py", line 137, in format_html
+    raise TypeError("args or kwargs must be provided.")
+TypeError: args or kwargs must be provided.
+ERROR 2026-01-14 12:41:21,510 log 16716 8336 "GET /admin/admin_core/user/11/change/ HTTP/1.1" 500 600768
+INFO 2026-01-14 12:42:38,262 autoreload 16716 16100 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py changed, reloading.
+INFO 2026-01-14 12:42:38,987 autoreload 13588 13744 Watching for file changes with StatReloader
+INFO 2026-01-14 12:43:05,063 autoreload 15976 7136 Watching for file changes with StatReloader
+WARNING 2026-01-14 12:43:08,119 log 15976 3624 Not Found: /
+WARNING 2026-01-14 12:43:08,120 log 15976 3624 "GET / HTTP/1.1" 404 3698
+INFO 2026-01-14 12:43:13,795 log 15976 3624 "GET /admin/ HTTP/1.1" 200 13527
+INFO 2026-01-14 12:43:17,430 log 15976 3624 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 22244
+INFO 2026-01-14 12:43:17,459 log 15976 3624 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:43:39,416 log 15976 3624 "POST /admin/admin_core/user/add/ HTTP/1.1" 200 22730
+INFO 2026-01-14 12:43:39,438 log 15976 3624 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:43:46,576 log 15976 3624 "GET /admin/admin_core/user/ HTTP/1.1" 200 21844
+INFO 2026-01-14 12:43:46,593 log 15976 3624 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:44:22,432 log 15976 21244 "POST /api/auth/login/ HTTP/1.1" 200 307
+INFO 2026-01-14 12:44:32,322 log 15976 3624 "GET /admin/admin_core/user/11/change/ HTTP/1.1" 200 34161
+INFO 2026-01-14 12:44:32,345 log 15976 3624 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:44:42,025 log 15976 3624 "POST /admin/admin_core/user/11/change/ HTTP/1.1" 302 0
+INFO 2026-01-14 12:44:42,102 log 15976 3624 "GET /admin/admin_core/user/ HTTP/1.1" 200 22399
+INFO 2026-01-14 12:44:42,118 log 15976 3624 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:44:42,209 log 15976 3624 "GET /static/admin/img/icon-yes-dark.svg HTTP/1.1" 200 558
+INFO 2026-01-14 12:44:49,507 log 15976 21244 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-14 12:45:05,161 log 15976 21244 "POST /api/auth/login/ HTTP/1.1" 200 330
+INFO 2026-01-14 12:45:31,497 log 15976 3624 "GET /admin/admin_core/role/ HTTP/1.1" 200 17908
+INFO 2026-01-14 12:45:31,513 log 15976 3624 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:45:41,227 log 15976 3624 "GET /admin/admin_core/role/add/ HTTP/1.1" 200 13906
+INFO 2026-01-14 12:45:41,242 log 15976 3624 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:45:47,701 log 15976 3624 "GET /admin/admin_core/role/ HTTP/1.1" 200 17908
+INFO 2026-01-14 12:45:47,718 log 15976 3624 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:45:51,510 log 15976 3624 "GET /admin/admin_core/role/3/change/ HTTP/1.1" 200 14242
+INFO 2026-01-14 12:45:51,524 log 15976 3624 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:45:53,349 log 15976 3624 "GET /admin/admin_core/role/ HTTP/1.1" 200 17908
+INFO 2026-01-14 12:48:19,680 autoreload 15976 7136 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py changed, reloading.
+INFO 2026-01-14 12:48:20,580 autoreload 16408 19564 Watching for file changes with StatReloader
+INFO 2026-01-14 12:48:27,706 autoreload 16408 19564 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\apps.py changed, reloading.
+INFO 2026-01-14 12:48:28,545 autoreload 3520 6472 Watching for file changes with StatReloader
+INFO 2026-01-14 12:48:53,352 autoreload 2188 16864 Watching for file changes with StatReloader
+WARNING 2026-01-14 12:48:56,004 log 2188 22284 Not Found: /
+WARNING 2026-01-14 12:48:56,005 log 2188 22284 "GET / HTTP/1.1" 404 3698
+INFO 2026-01-14 12:49:01,106 log 2188 22284 "GET /admin/ HTTP/1.1" 200 13432
+INFO 2026-01-14 12:49:03,576 log 2188 22284 "GET /admin/admin_core/role/ HTTP/1.1" 200 16095
+INFO 2026-01-14 12:49:16,870 log 2188 1780 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-14 12:49:19,054 log 2188 1780 "POST /api/auth/login/ HTTP/1.1" 200 330
+INFO 2026-01-14 12:51:49,922 autoreload 6428 4856 Watching for file changes with StatReloader
+INFO 2026-01-14 12:51:57,688 log 6428 1128 "GET /admin/admin_core/role/ HTTP/1.1" 200 16095
+WARNING 2026-01-14 12:52:16,740 log 6428 1128 Not Found: /
+WARNING 2026-01-14 12:52:16,742 log 6428 1128 "GET / HTTP/1.1" 404 3698
+INFO 2026-01-14 12:52:21,550 log 6428 1128 "GET /admin/ HTTP/1.1" 200 13432
+INFO 2026-01-14 12:52:24,921 log 6428 1128 "GET /admin/admin_core/user/ HTTP/1.1" 200 22084
+INFO 2026-01-14 12:52:24,951 log 6428 1128 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:52:28,966 log 6428 1128 "GET /admin/ HTTP/1.1" 200 13432
+INFO 2026-01-14 12:52:31,518 log 6428 1128 "GET /admin/admin_core/role/ HTTP/1.1" 200 16095
+INFO 2026-01-14 12:52:40,185 log 6428 1128 "GET /admin/admin_core/user/ HTTP/1.1" 200 22084
+INFO 2026-01-14 12:52:40,200 log 6428 1128 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:52:46,836 log 6428 20192 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-14 12:52:51,154 log 6428 20192 "POST /api/auth/login/ HTTP/1.1" 200 330
+INFO 2026-01-14 12:54:43,941 log 6428 1128 "GET /admin/admin_core/user/add/ HTTP/1.1" 200 22148
+INFO 2026-01-14 12:54:43,958 log 6428 1128 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:55:33,966 log 6428 1128 "POST /admin/admin_core/user/add/ HTTP/1.1" 200 22468
+INFO 2026-01-14 12:55:33,985 log 6428 1128 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:55:52,420 log 6428 1128 "POST /admin/admin_core/user/add/ HTTP/1.1" 302 0
+INFO 2026-01-14 12:55:52,458 log 6428 1128 "GET /admin/admin_core/user/12/change/ HTTP/1.1" 200 33931
+INFO 2026-01-14 12:55:52,474 log 6428 1128 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:55:55,959 log 6428 1128 "GET /admin/admin_core/role/ HTTP/1.1" 200 16095
+INFO 2026-01-14 12:56:01,186 log 6428 1128 "GET /admin/admin_core/role/1/change/ HTTP/1.1" 200 13611
+INFO 2026-01-14 12:56:01,200 log 6428 1128 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:56:10,221 log 6428 1128 "GET /admin/admin_core/user/ HTTP/1.1" 200 22772
+INFO 2026-01-14 12:56:10,234 log 6428 1128 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:56:12,286 log 6428 1128 "GET /admin/admin_core/user/12/change/ HTTP/1.1" 200 33683
+INFO 2026-01-14 12:56:12,300 log 6428 1128 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:56:23,378 log 6428 1128 "POST /admin/admin_core/user/12/change/ HTTP/1.1" 302 0
+INFO 2026-01-14 12:56:23,406 log 6428 1128 "GET /admin/admin_core/user/ HTTP/1.1" 200 23332
+INFO 2026-01-14 12:56:23,422 log 6428 1128 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:56:38,632 log 6428 20192 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-14 12:57:09,463 log 6428 1128 "GET /admin/admin_core/user/ HTTP/1.1" 200 23111
+INFO 2026-01-14 12:57:09,478 log 6428 1128 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:57:25,625 log 6428 20192 "POST /api/auth/login/ HTTP/1.1" 200 388
+INFO 2026-01-14 12:57:37,498 log 6428 1128 "GET /admin/admin_core/user/12/change/ HTTP/1.1" 200 34127
+INFO 2026-01-14 12:57:37,518 log 6428 1128 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:57:46,826 log 6428 1128 "POST /admin/admin_core/user/12/change/ HTTP/1.1" 302 0
+INFO 2026-01-14 12:57:46,852 log 6428 1128 "GET /admin/admin_core/user/ HTTP/1.1" 200 23640
+INFO 2026-01-14 12:57:46,869 log 6428 1128 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:57:53,507 log 6428 20192 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-14 12:57:56,836 log 6428 20192 "POST /api/auth/login/ HTTP/1.1" 200 330
+INFO 2026-01-14 12:58:00,781 log 6428 20192 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-14 12:58:19,665 log 6428 20192 "POST /api/auth/login/ HTTP/1.1" 200 438
+INFO 2026-01-14 12:58:40,732 log 6428 1128 "GET /admin/admin_core/user/12/change/ HTTP/1.1" 200 34311
+INFO 2026-01-14 12:58:40,746 log 6428 1128 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:58:50,499 log 6428 1128 "POST /admin/admin_core/user/12/change/ HTTP/1.1" 302 0
+INFO 2026-01-14 12:58:50,527 log 6428 1128 "GET /admin/admin_core/user/ HTTP/1.1" 200 23332
+INFO 2026-01-14 12:58:50,542 log 6428 1128 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:59:29,470 log 6428 1128 "GET /admin/admin_core/user/12/change/ HTTP/1.1" 200 34127
+INFO 2026-01-14 12:59:29,486 log 6428 1128 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 12:59:36,001 log 6428 20192 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-14 12:59:38,209 log 6428 20192 "POST /api/auth/login/ HTTP/1.1" 200 388
+INFO 2026-01-14 14:04:21,958 log 6428 12228 "GET /api/users/ HTTP/1.1" 200 24115
+INFO 2026-01-14 14:04:22,042 log 6428 12228 "GET /api/users/ HTTP/1.1" 200 24115
+INFO 2026-01-14 14:05:57,991 autoreload 6428 4856 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\serializers\user_serializer.py changed, reloading.
+INFO 2026-01-14 14:05:58,798 autoreload 10096 22276 Watching for file changes with StatReloader
+INFO 2026-01-14 14:06:05,842 autoreload 10096 22276 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\serializers\user_serializer.py changed, reloading.
+INFO 2026-01-14 14:06:06,572 autoreload 936 14452 Watching for file changes with StatReloader
+INFO 2026-01-14 14:06:11,354 autoreload 936 14452 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\serializers\user_serializer.py changed, reloading.
+INFO 2026-01-14 14:06:12,114 autoreload 22472 11876 Watching for file changes with StatReloader
+INFO 2026-01-14 14:06:20,960 autoreload 22472 11876 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\serializers\user_serializer.py changed, reloading.
+INFO 2026-01-14 14:06:21,664 autoreload 18620 13152 Watching for file changes with StatReloader
+INFO 2026-01-14 14:06:26,318 autoreload 18620 13152 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\services\approval_service.py changed, reloading.
+INFO 2026-01-14 14:06:27,004 autoreload 296 15468 Watching for file changes with StatReloader
+INFO 2026-01-14 14:06:31,658 autoreload 296 15468 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\services\approval_service.py changed, reloading.
+INFO 2026-01-14 14:06:32,377 autoreload 8252 18132 Watching for file changes with StatReloader
+INFO 2026-01-14 14:06:41,199 autoreload 8252 18132 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\admin.py changed, reloading.
+INFO 2026-01-14 14:06:41,906 autoreload 16520 5424 Watching for file changes with StatReloader
+INFO 2026-01-14 14:06:51,693 autoreload 16520 5424 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\utils.py changed, reloading.
+INFO 2026-01-14 14:06:52,411 autoreload 6324 19856 Watching for file changes with StatReloader
+INFO 2026-01-14 14:08:22,543 autoreload 6324 19856 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\apps.py changed, reloading.
+INFO 2026-01-14 14:08:23,227 autoreload 12856 15636 Watching for file changes with StatReloader
+INFO 2026-01-14 14:08:39,854 log 12856 18600 "GET /admin/admin_core/user/ HTTP/1.1" 200 22321
+INFO 2026-01-14 14:08:39,871 log 12856 18600 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 14:10:34,758 log 12856 18600 "GET /api/users/ HTTP/1.1" 200 23680
+INFO 2026-01-14 14:13:06,418 log 12856 18600 "GET /admin/admin_core/auditlog/ HTTP/1.1" 200 33738
+INFO 2026-01-14 14:13:10,985 log 12856 18600 "GET /admin/admin_core/role/ HTTP/1.1" 200 15206
+INFO 2026-01-14 14:13:12,925 log 12856 18600 "GET /admin/admin_core/approvalrequest/ HTTP/1.1" 200 19778
+INFO 2026-01-14 14:13:12,937 log 12856 18600 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 14:13:17,626 log 12856 18600 "GET /admin/admin_core/approvalrequest/7/change/ HTTP/1.1" 200 22516
+INFO 2026-01-14 14:13:17,645 log 12856 18600 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 14:13:24,543 log 12856 18600 "GET /admin/admin_core/user/ HTTP/1.1" 200 22321
+INFO 2026-01-14 14:13:24,555 log 12856 18600 "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO 2026-01-14 14:14:08,971 log 12856 19372 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+INFO 2026-01-14 14:14:08,983 log 12856 19372 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-14 14:14:10,831 log 12856 19372 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2026-01-14 14:14:11,468 log 12856 19372 "POST /api/auth/login/ HTTP/1.1" 200 388
+INFO 2026-01-14 14:14:21,172 log 12856 19372 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-14 14:14:23,128 log 12856 19372 "POST /api/auth/login/ HTTP/1.1" 200 388
+INFO 2026-01-14 15:09:06,295 autoreload 12856 15636 C:\Users\hp\Desktop\admin_portal\admin_portal\admin_core\views\web_views.py changed, reloading.
+INFO 2026-01-14 15:09:07,359 autoreload 12092 8832 Watching for file changes with StatReloader
+INFO 2026-01-14 15:39:54,911 log 12092 17988 "OPTIONS /api/users/ HTTP/1.1" 200 23622
+INFO 2026-01-14 16:00:09,981 log 12092 3472 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-14 16:09:56,030 log 12092 17700 "POST /api/auth/login/ HTTP/1.1" 200 388
+INFO 2026-01-14 16:20:50,381 log 12092 12556 "OPTIONS /api/auth/logout/ HTTP/1.1" 200 0
+INFO 2026-01-14 16:20:50,395 log 12092 12556 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-14 16:20:52,199 log 12092 12556 "OPTIONS /api/auth/login/ HTTP/1.1" 200 0
+INFO 2026-01-14 16:20:52,938 log 12092 12556 "POST /api/auth/login/ HTTP/1.1" 200 388
+INFO 2026-01-14 16:23:18,381 log 12092 12556 "POST /api/auth/logout/ HTTP/1.1" 200 32
+INFO 2026-01-14 16:28:32,428 log 12092 16168 "OPTIONS /api/users/ HTTP/1.1" 200 23622
+WARNING 2026-01-14 16:28:35,372 log 12092 16168 Bad Request: /api/users/by_unit/
+WARNING 2026-01-14 16:28:35,373 log 12092 16168 "GET /api/users/by_unit/ HTTP/1.1" 400 6284
+WARNING 2026-01-14 16:28:38,263 log 12092 16168 Bad Request: /api/users/in_hierarchy/
+WARNING 2026-01-14 16:28:38,264 log 12092 16168 "GET /api/users/in_hierarchy/ HTTP/1.1" 400 6390
+WARNING 2026-01-14 16:28:39,636 log 12092 16168 Bad Request: /api/users/in_hierarchy/
+WARNING 2026-01-14 16:28:39,636 log 12092 16168 "GET /api/users/in_hierarchy/ HTTP/1.1" 400 6390
+INFO 2026-01-14 16:28:41,147 log 12092 16168 "OPTIONS /api/users/in_hierarchy/ HTTP/1.1" 200 6839
+WARNING 2026-01-14 16:28:46,430 log 12092 16168 Bad Request: /api/users/in_hierarchy/
+WARNING 2026-01-14 16:28:46,432 log 12092 16168 "GET /api/users/in_hierarchy/ HTTP/1.1" 400 6390
+INFO 2026-01-14 16:28:48,538 log 12092 16168 "OPTIONS /api/users/in_hierarchy/ HTTP/1.1" 200 6839
+WARNING 2026-01-14 16:28:52,534 log 12092 16168 Bad Request: /api/users/in_hierarchy/
+WARNING 2026-01-14 16:28:52,535 log 12092 16168 "GET /api/users/in_hierarchy/ HTTP/1.1" 400 6390
+INFO 2026-01-14 16:29:00,015 log 12092 16168 "GET /api/users/ HTTP/1.1" 200 23680
+INFO 2026-01-14 18:25:26,533 log 12092 21124 "GET /api/users/ HTTP/1.1" 200 23680
+INFO 2026-01-14 18:25:27,127 log 12092 21124 "GET /api/users/ HTTP/1.1" 200 23680

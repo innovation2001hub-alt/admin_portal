@@ -11,6 +11,13 @@ class RoleSimpleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Role
         fields = ['id', 'name']
+    
+    def to_representation(self, instance):
+        """Filter out non-standard roles."""
+        allowed_roles = ['ADMIN', 'MAKER', 'CHECKER']
+        if instance.name not in allowed_roles:
+            return None
+        return super().to_representation(instance)
 
 
 class UnitSimpleSerializer(serializers.ModelSerializer):
@@ -45,6 +52,13 @@ class UserListSerializer(serializers.ModelSerializer):
             'is_active',
         ]
         read_only_fields = ['id', 'full_name']
+    
+    def to_representation(self, instance):
+        """Filter out non-standard roles from the roles list."""
+        ret = super().to_representation(instance)
+        if 'roles' in ret and ret['roles']:
+            ret['roles'] = [role for role in ret['roles'] if role is not None]
+        return ret
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -62,7 +76,7 @@ class UserSerializer(serializers.ModelSerializer):
     )
     roles = RoleSimpleSerializer(many=True, read_only=True)
     role_ids = serializers.PrimaryKeyRelatedField(
-        queryset=Role.objects.all(),
+        queryset=Role.objects.filter(name__in=['ADMIN', 'MAKER', 'CHECKER']),
         source='roles',
         many=True,
         write_only=True,
@@ -98,6 +112,13 @@ class UserSerializer(serializers.ModelSerializer):
             'employee_id': {'required': True},
             'designation': {'required': True},
         }
+    
+    def to_representation(self, instance):
+        """Filter out non-standard roles from the roles list."""
+        ret = super().to_representation(instance)
+        if 'roles' in ret and ret['roles']:
+            ret['roles'] = [role for role in ret['roles'] if role is not None]
+        return ret
     
     def validate_password(self, value):
         """Validate password strength."""

@@ -1,0 +1,21 @@
+{% extends "admin/index.html" %}
+{% load i18n %}
+
+{% block content_title %}
+  <h1>{{ title }}</h1>
+{% endblock %}
+
+{% block content %}
+  {% if dashboard_url %}
+    <div style="margin-bottom: 24px; padding: 16px; background: #f0f7ff; border-left: 4px solid #1976d2; border-radius: 4px;">
+      <h2 style="margin-top: 0; color: #1976d2;">Quick Access</h2>
+      <p style="margin: 8px 0;">
+        <a href="{{ dashboard_url }}" target="_blank" style="background: #1976d2; color: white; padding: 10px 16px; border-radius: 4px; text-decoration: none; font-weight: bold; display: inline-block;">
+          → Go to Your Dashboard
+        </a>
+      </p>
+    </div>
+  {% endif %}
+
+  {{ block.super }}
+{% endblock %}

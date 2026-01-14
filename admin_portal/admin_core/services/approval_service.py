@@ -211,9 +211,9 @@ class ApprovalService:
         if action_type in ['CREATE_USER', 'UPDATE_USER', 'DELETE_USER']:
             superior_unit = maker.unit.parent
             if superior_unit:
-                # Get the first admin/manager user in the superior unit
+                # Get the first admin user in the superior unit
                 checker = superior_unit.users.filter(
-                    roles__name__in=['ADMIN', 'MANAGER']
+                    roles__name='ADMIN'
                 ).first()
                 return checker
         
@@ -222,7 +222,7 @@ class ApprovalService:
             ho_unit = maker.unit.get_root_unit()
             if ho_unit:
                 checker = ho_unit.users.filter(
-                    roles__name__in=['ADMIN', 'HEAD_OFFICE']
+                    roles__name='ADMIN'
                 ).first()
                 return checker
         

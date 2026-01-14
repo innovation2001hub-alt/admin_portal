@@ -19,7 +19,7 @@ cd frontend
 npm install
 ```
 
-### 2. Start Development Server
+### 2. Start Development Server 
 
 Make sure your Django backend is running on `http://127.0.0.1:8000`
 

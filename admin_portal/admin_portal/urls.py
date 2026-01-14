@@ -16,6 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from admin_core.views.web_views import (
+    login_view,
+    logout_view,
+    AdminDashboardView,
+    MakerDashboardView,
+    CheckerDashboardView,
+)
 from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularSwaggerView,
@@ -25,6 +32,12 @@ from drf_spectacular.views import (
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('admin_core.urls')),
+    # Web auth + dashboards
+    path('login/', login_view, name='login'),
+    path('logout/', logout_view, name='logout'),
+    path('admin/dashboard/', AdminDashboardView.as_view(), name='admin-dashboard'),
+    path('maker/dashboard/', MakerDashboardView.as_view(), name='maker-dashboard'),
+    path('checker/dashboard/', CheckerDashboardView.as_view(), name='checker-dashboard'),
     # OpenAPI Schema & Docs
     path('api/schema/', SpectacularAPIView.as_view(), name='schema'),
     path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),

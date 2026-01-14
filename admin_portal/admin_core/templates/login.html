@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background:#f6f7fb; margin:0; }
+    .wrap { max-width: 380px; margin: 8vh auto; background:#fff; padding:24px 28px; border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,.08); }
+    h1 { margin:0 0 16px; font-size: 22px; }
+    .field { margin-bottom: 12px; }
+    label { display:block; margin-bottom:6px; color:#333; font-size: 14px; }
+    input { width:100%; padding:10px 12px; border:1px solid #d9dbe3; border-radius:8px; font-size: 14px; }
+    button { width:100%; padding:10px 12px; border:0; background:#1f6feb; color:#fff; border-radius:8px; cursor:pointer; font-weight:600; }
+    .messages { margin: 0 0 12px; padding:0; list-style:none; }
+    .messages li { padding:10px 12px; border-radius:8px; margin-bottom:8px; font-size: 14px; }
+    .messages .error { background:#ffe8e6; color:#8a1f11; }
+    .messages .warning { background:#fff6e1; color:#8a5a00; }
+    .messages .success { background:#e9fbef; color:#0f6c2f; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Sign in</h1>
+    {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+          <li class="{{ message.tags }}">{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+    <form method="post">
+      {% csrf_token %}
+      <div class="field">
+        <label for="id_identifier">Username or Employee ID</label>
+        <input id="id_identifier" name="identifier" autocomplete="username" />
+      </div>
+      <div class="field">
+        <label for="id_password">Password</label>
+        <input id="id_password" type="password" name="password" autocomplete="current-password" />
+      </div>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html>

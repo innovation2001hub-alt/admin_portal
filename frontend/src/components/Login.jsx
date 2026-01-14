@@ -22,7 +22,7 @@ const Login = () => {
     const result = await login(employeeId, password);
     
     if (result.success) {
-      // Redirect to dashboard after successful login
+      // Redirect to role-based dashboard
       navigate('/dashboard');
     }
   };

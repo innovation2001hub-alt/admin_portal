@@ -1,8 +1,18 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.utils.html import format_html, format_html_join
+from django.utils.safestring import mark_safe
+from django.urls import reverse
 from django import forms
 from .models import User, Unit, Role, ApprovalRequest, AuditLog
+from .utils import (
+    get_primary_role_name,
+    get_dashboard_url,
+    ROLE_ADMIN,
+    ROLE_MAKER,
+    ROLE_CHECKER,
+)
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -27,7 +37,7 @@ class CustomUserChangeForm(UserChangeForm):
 @admin.register(Role)
 class RoleAdmin(admin.ModelAdmin):
     """Admin interface for Role model."""
-    list_display = ('name', 'created_at', 'updated_at')
+    list_display = ('name', 'get_colored_name', 'get_user_count', 'created_at', 'updated_at')
     list_filter = ('created_at', 'updated_at')
     search_fields = ('name', 'description')
     readonly_fields = ('created_at', 'updated_at')
@@ -41,6 +51,40 @@ class RoleAdmin(admin.ModelAdmin):
             'classes': ('collapse',)
         }),
     )
+
+    def get_colored_name(self, obj):
+        """Display role name with color badge."""
+        colors = {'ADMIN': '#d32f2f', 'MAKER': '#1976d2', 'CHECKER': '#388e3c'}
+        color = colors.get(obj.name, '#757575')
+        return format_html(
+            '<span style="background-color:{}; color:#fff; padding:4px 8px; border-radius:4px; font-weight:bold;">{}</span>',
+            color,
+            obj.name
+        )
+    get_colored_name.short_description = 'Role'
+
+    def get_user_count(self, obj):
+        """Display number of users with this role."""
+        count = obj.users.count()
+        return format_html('<strong>{}</strong> user{}', count, '' if count == 1 else 's')
+    get_user_count.short_description = 'Users'
+
+    def has_add_permission(self, request):
+        """Disallow adding new roles; roles are fixed."""
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        """Disallow deleting roles; roles are fixed."""
+        return False
+
+    def get_readonly_fields(self, request, obj=None):
+        # Make role fields read-only to prevent edits
+        return ('name', 'description', 'created_at', 'updated_at')
+    
+    def get_queryset(self, request):
+        """Show only standard roles (ADMIN, MAKER, CHECKER)."""
+        qs = super().get_queryset(request)
+        return qs.filter(name__in=[ROLE_ADMIN, ROLE_MAKER, ROLE_CHECKER])
 
 
 @admin.register(Unit)
@@ -72,15 +116,15 @@ class UnitAdmin(admin.ModelAdmin):
 
 @admin.register(User)
 class UserAdmin(BaseUserAdmin):
-    """Admin interface for User model with proper password handling."""
+    """Admin interface for User model with dashboard quick access."""
     form = CustomUserChangeForm
     add_form = CustomUserCreationForm
     
-    list_display = ('username', 'get_full_name', 'employee_id', 'designation', 'unit', 'get_roles_display', 'is_active')
+    list_display = ('username', 'get_full_name', 'employee_id', 'designation', 'unit', 'get_roles_display', 'get_dashboard_link', 'is_active')
     list_filter = ('is_active', 'unit', 'roles', 'date_joined')
     search_fields = ('username', 'first_name', 'last_name', 'email', 'employee_id')
     filter_horizontal = ('roles', 'groups', 'user_permissions')
-    readonly_fields = ('date_joined', 'last_login')
+    readonly_fields = ('date_joined', 'last_login', 'get_role_info', 'get_dashboard_info')
     ordering = ('username',)
     
     # Fieldsets for editing existing users
@@ -96,7 +140,11 @@ class UserAdmin(BaseUserAdmin):
             'classes': ('collapse',)
         }),
         ('Roles & Assignments', {
-            'fields': ('roles',)
+            'fields': ('roles', 'get_role_info')
+        }),
+        ('Dashboard Access', {
+            'fields': ('get_dashboard_info',),
+            'description': 'Quick links to this user\'s dashboard based on assigned role.'
         }),
         ('Important Dates', {
             'fields': ('last_login', 'date_joined'),
@@ -135,9 +183,86 @@ class UserAdmin(BaseUserAdmin):
     get_full_name.short_description = 'Full Name'
     
     def get_roles_display(self, obj):
-        """Display user's roles as comma-separated list."""
-        return ', '.join([role.name for role in obj.roles.all()])
+        """Display user's roles with color badges."""
+        colors = {'ADMIN': '#d32f2f', 'MAKER': '#1976d2', 'CHECKER': '#388e3c'}
+        roles_html = []
+        for role in obj.roles.all():
+            color = colors.get(role.name, '#757575')
+            roles_html.append(
+                format_html(
+                    '<span style="background-color:{}; color:#fff; padding:2px 6px; border-radius:3px; margin-right:4px; font-size:11px; font-weight:bold;">{}</span>',
+                    color,
+                    role.name
+                )
+            )
+        return format_html(' '.join(['{}'] * len(roles_html)), *roles_html) if roles_html else '—'
     get_roles_display.short_description = 'Roles'
+
+    def formfield_for_manytomany(self, db_field, request=None, **kwargs):
+        """Limit role choices to fixed roles."""
+        if db_field.name == 'roles':
+            kwargs['queryset'] = Role.objects.filter(name__in=[ROLE_ADMIN, ROLE_MAKER, ROLE_CHECKER]).order_by('name')
+        return super().formfield_for_manytomany(db_field, request, **kwargs)
+
+    def get_role_info(self, obj):
+        """Display assigned roles with descriptions."""
+        if not obj.pk:
+            return 'Save user first to see role assignments.'
+        roles = obj.roles.all()
+        if not roles.exists():
+            return mark_safe('<em style="color:#f44336;">No roles assigned</em>')
+        # Use format_html_join to escape role data safely
+        items = format_html_join(
+            '',
+            '<li><strong>{}</strong>: {}</li>',
+            ((role.name, role.description) for role in roles)
+        )
+        return format_html('<ul style="margin:0; padding-left:20px;">{}</ul>', items)
+    get_role_info.short_description = 'Role Information'
+
+    def get_dashboard_link(self, obj):
+        """Display clickable link to user's dashboard."""
+        if not obj.pk or not obj.is_active:
+            return '—'
+        role = get_primary_role_name(obj)
+        if not role:
+            return mark_safe('<span style="color:#f44336;">No role</span>')
+        colors = {'ADMIN': '#d32f2f', 'MAKER': '#1976d2', 'CHECKER': '#388e3c'}
+        color = colors.get(role, '#757575')
+        return format_html(
+            '<a href="{}" target="_blank" style="background-color:{}; color:#fff; padding:6px 12px; border-radius:4px; text-decoration:none; font-weight:bold;" title="View {}\' {} dashboard">{} Dashboard</a>',
+            get_dashboard_url(obj),
+            color,
+            obj.get_full_name(),
+            role,
+            role
+        )
+    get_dashboard_link.short_description = 'Dashboard'
+
+    def get_dashboard_info(self, obj):
+        """Display dashboard access information and quick link."""
+        if not obj.pk:
+            return 'Save user first to see dashboard access.'
+        role = get_primary_role_name(obj)
+        if not role:
+            return mark_safe('<em style="color:#f44336;">User has no role assigned. Cannot access dashboard.</em>')
+        colors = {'ADMIN': '#d32f2f', 'MAKER': '#1976d2', 'CHECKER': '#388e3c'}
+        color = colors.get(role, '#757575')
+        if not obj.is_active:
+            return mark_safe('<em style="color:#f44336;">User account is inactive.</em>')
+        return format_html(
+            '<div style="padding:12px; background:#f5f5f5; border-left:4px solid {}; border-radius:4px;">' 
+            '<p><strong>Role:</strong> {}</p>'
+            '<p><strong>Dashboard URL:</strong> <code>{}</code></p>'
+            '<p><a href="{}" class="button" target="_blank" style="background:{}; color:#fff; padding:8px 16px; border-radius:4px; text-decoration:none; display:inline-block; margin-top:8px;">Open Dashboard</a></p>'
+            '</div>',
+            color,
+            role,
+            get_dashboard_url(obj),
+            get_dashboard_url(obj),
+            color
+        )
+    get_dashboard_info.short_description = 'Dashboard Access'
     
     def save_model(self, request, obj, form, change):
         """Save model and handle roles after user creation."""
