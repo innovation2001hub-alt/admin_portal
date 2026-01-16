@@ -55,6 +55,9 @@ How to Run Server Backend:
 C:\Users\hp\Desktop\admin_portal\venv\Scripts\python.exe C:\Users\hp\Desktop\admin_portal\admin_portal\manage.py runserver
 
 
+exiting venv:
+deactivate
+
 How to run server in Frontend:
 PS C:\Users\hp\Desktop\admin_portal\frontend> npm run dev
 

@@ -31,7 +31,8 @@ const Login = () => {
     <div className="login-container">
       <div className="login-card">
         <div className="login-header">
-          <h1>Admin Portal</h1>
+          <img src="/sbi_logo.png" alt="SBI Logo" className="login-logo" />
+          <h1>SBI Admin Portal</h1>
           <p>Sign in to your account</p>
         </div>
 

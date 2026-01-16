@@ -15,7 +15,10 @@ const Dashboard = ({ roleTitle = 'Dashboard', color = '#1f6feb', highlights = []
   return (
     <div className="dashboard-container">
       <div className="dashboard-header" style={{ borderBottomColor: color }}>
-        <h1 style={{ color }}>{roleTitle} Dashboard</h1>
+        <div className="dashboard-header-logo">
+          <img src="/sbi_logo.png" alt="SBI Logo" />
+          <h1>{roleTitle} Dashboard</h1>
+        </div>
         <button onClick={handleLogout} className="logout-button">
           Logout
         </button>
