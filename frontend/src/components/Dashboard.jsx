@@ -1,23 +1,108 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import CreateRequestForm from './CreateRequestForm';
+import MyRequestsList from './MyRequestsList';
+import ApprovalQueue from './ApprovalQueue';
+import RequestReview from './RequestReview';
+import AllRequests from './AllRequests';
+import ApprovalMetrics from './ApprovalMetrics';
+import UserManagement from './UserManagement';
 import './Dashboard.css';
 
-const Dashboard = ({ roleTitle = 'Dashboard', color = '#1f6feb', highlights = [] }) => {
-  const { user, logout } = useAuth();
+const Dashboard = () => {
+  const { user, logout, isMaker, isChecker, isAdmin, isSuperAdmin } = useAuth();
   const navigate = useNavigate();
+  const [selectedRequest, setSelectedRequest] = useState(null);
+  const [refreshTrigger, setRefreshTrigger] = useState(0);
+  const [currentTab, setCurrentTab] = useState('overview');
+  const [token, setToken] = useState(localStorage.getItem('token'));
+  
+  // Set initial tab based on user role once user is loaded
+  React.useEffect(() => {
+    if (user) {
+      if (isSuperAdmin()) setCurrentTab('user-management');
+      else if (isMaker() || isAdmin()) setCurrentTab('create');
+      else if (isChecker()) setCurrentTab('queue');
+    }
+  }, [user, isSuperAdmin, isMaker, isAdmin, isChecker]);
+
+  // Show loading state if user is not loaded yet
+  if (!user) {
+    return (
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        alignItems: 'center', 
+        height: '100vh' 
+      }}>
+        <div>Loading...</div>
+      </div>
+    );
+  }
 
   const handleLogout = async () => {
     await logout();
     navigate('/login');
   };
 
+  const handleRequestApprovalReject = () => {
+    setRefreshTrigger((prev) => prev + 1);
+    setSelectedRequest(null);
+  };
+
+  const getRoleTitle = () => {
+    if (isSuperAdmin()) return 'Super Administrator';
+    if (isAdmin()) return 'Administrator';
+    if (isChecker()) return 'Checker/Approver';
+    if (isMaker()) return 'Request Maker';
+    return 'Dashboard';
+  };
+
+  const getRoleColor = () => {
+    if (isSuperAdmin()) return '#9c27b0';
+    if (isAdmin()) return '#f64747';
+    if (isChecker()) return '#2cce7d';
+    if (isMaker()) return '#1f6feb';
+    return '#1f6feb';
+  };
+
+  const getAvailableTabs = () => {
+    const tabs = [];
+    
+    if (isSuperAdmin()) {
+      tabs.push({ id: 'user-management', label: '👥 User Management', icon: 'users' });
+    }
+    
+    if (isMaker() || isAdmin()) {
+      tabs.push(
+        { id: 'create', label: '✚ Create Request', icon: 'create' },
+        { id: 'my-requests', label: '📋 My Requests', icon: 'requests' }
+      );
+    }
+    if (isChecker() || isAdmin()) {
+      tabs.push({ id: 'queue', label: '✓ Approval Queue', icon: 'queue' });
+    }
+    if (isAdmin()) {
+      tabs.push(
+        { id: 'all-requests', label: '📊 All Requests', icon: 'all' },
+        { id: 'metrics', label: '📈 Metrics', icon: 'metrics' }
+      );
+    }
+    if (tabs.length === 0) {
+      tabs.push({ id: 'overview', label: '👋 Overview', icon: 'overview' });
+    }
+    return tabs;
+  };
+
+  const availableTabs = getAvailableTabs();
+
   return (
     <div className="dashboard-container">
-      <div className="dashboard-header" style={{ borderBottomColor: color }}>
+      <div className="dashboard-header" style={{ borderBottomColor: getRoleColor() }}>
         <div className="dashboard-header-logo">
           <img src="/sbi_logo.png" alt="SBI Logo" />
-          <h1>{roleTitle} Dashboard</h1>
+          <h1>{getRoleTitle()} Dashboard</h1>
         </div>
         <button onClick={handleLogout} className="logout-button">
           Logout
@@ -25,11 +110,13 @@ const Dashboard = ({ roleTitle = 'Dashboard', color = '#1f6feb', highlights = []
       </div>
 
       <div className="dashboard-content">
-        <div className="welcome-card" style={{ borderLeftColor: color }}>
+        {/* Welcome Card */}
+        <div className="welcome-card" style={{ borderLeftColor: getRoleColor() }}>
           <h2>Welcome back, {user?.first_name || user?.username}! 👋</h2>
-          <p>You are signed in as <strong>{roleTitle}</strong>.</p>
+          <p>You are signed in as <strong>{getRoleTitle()}</strong>.</p>
         </div>
 
+        {/* User Info Card */}
         <div className="user-info-card">
           <h3>User Information</h3>
           <div className="info-grid">
@@ -38,67 +125,101 @@ const Dashboard = ({ roleTitle = 'Dashboard', color = '#1f6feb', highlights = []
               <span className="info-value">{user?.full_name || `${user?.first_name} ${user?.last_name}`.trim() || 'N/A'}</span>
             </div>
             <div className="info-item">
-              <span className="info-label">Username:</span>
-              <span className="info-value">{user?.username}</span>
-            </div>
-            <div className="info-item">
-              <span className="info-label">Email:</span>
-              <span className="info-value">{user?.email || 'N/A'}</span>
-            </div>
-            <div className="info-item">
               <span className="info-label">Employee ID (PF ID):</span>
               <span className="info-value">{user?.employee_id || 'N/A'}</span>
-            </div>
-            <div className="info-item">
-              <span className="info-label">Designation:</span>
-              <span className="info-value">{user?.designation || 'N/A'}</span>
             </div>
             <div className="info-item">
               <span className="info-label">Unit:</span>
               <span className="info-value">{user?.unit?.name || 'N/A'}</span>
             </div>
+            <div className="info-item">
+              <span className="info-label">Email:</span>
+              <span className="info-value">{user?.email || 'N/A'}</span>
+            </div>
           </div>
         </div>
 
+        {/* Roles Card */}
         {user?.roles && user.roles.length > 0 && (
           <div className="roles-card">
             <h3>Your Roles & Permissions</h3>
             <div className="roles-container">
               {user.roles.map((role) => (
-                <div key={role.id} className="role-badge">
+                <div key={role.id} className="role-badge" style={{ borderColor: getRoleColor() }}>
                   <span className="role-name">{role.name}</span>
                 </div>
               ))}
             </div>
-            <div className="roles-description">
-              <p>You have been assigned the following roles in the system:</p>
-              <ul>
-                {user.roles.map((role) => (
-                  <li key={role.id}>
-                    <strong>{role.name}</strong>
-                  </li>
-                ))}
-              </ul>
+          </div>
+        )}
+
+        {/* Tabs Navigation */}
+        {availableTabs.length > 0 && (
+          <div className="dashboard-tabs">
+            <div className="tabs-header">
+              {availableTabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  className={`tab-button ${currentTab === tab.id ? 'active' : ''}`}
+                  onClick={() => setCurrentTab(tab.id)}
+                  style={currentTab === tab.id ? { borderBottomColor: getRoleColor() } : {}}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+
+            <div className="tabs-content">
+              {/* User Management Tab (Super Admin only) */}
+              {currentTab === 'user-management' && isSuperAdmin() && (
+                <UserManagement token={token} />
+              )}
+
+              {/* Create Request Tab */}
+              {currentTab === 'create' && (isMaker() || isAdmin()) && (
+                <CreateRequestForm
+                  onSuccess={() => {
+                    setCurrentTab('my-requests');
+                  }}
+                />
+              )}
+
+              {/* My Requests Tab */}
+              {currentTab === 'my-requests' && (isMaker() || isAdmin()) && (
+                <MyRequestsList key={`my-requests-${refreshTrigger}`} />
+              )}
+
+              {/* Approval Queue Tab */}
+              {currentTab === 'queue' && (isChecker() || isAdmin()) && (
+                <ApprovalQueue
+                  key={`queue-${refreshTrigger}`}
+                  onSelectRequest={(request) => {
+                    setSelectedRequest(request);
+                  }}
+                />
+              )}
+
+              {/* All Requests Tab */}
+              {currentTab === 'all-requests' && isAdmin() && (
+                <AllRequests key={`all-${refreshTrigger}`} />
+              )}
+
+              {/* Metrics Tab */}
+              {currentTab === 'metrics' && isAdmin() && (
+                <ApprovalMetrics key={`metrics-${refreshTrigger}`} />
+              )}
             </div>
           </div>
         )}
 
-        {(!user?.roles || user.roles.length === 0) && (
-          <div className="roles-card no-roles">
-            <h3>Roles & Permissions</h3>
-            <p>No roles have been assigned to your account yet. Please contact your administrator.</p>
-          </div>
+        {/* Request Review Modal */}
+        {selectedRequest && (isChecker() || isAdmin()) && (
+          <RequestReview
+            request={selectedRequest}
+            onClose={() => setSelectedRequest(null)}
+            onApproveReject={handleRequestApprovalReject}
+          />
         )}
-
-        <div className="placeholder-card" style={{ borderTopColor: color }}>
-          <h3>Focus Areas</h3>
-          <p>Key actions for your role:</p>
-          <ul>
-            {highlights.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </div>
       </div>
     </div>
   );

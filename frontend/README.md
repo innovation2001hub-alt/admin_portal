@@ -1,5 +1,5 @@
 # Admin Portal Frontend
-
+<!-- cd C:\Users\hp\Desktop\admin_portal\frontend; npm run dev -- --host --port 3002 -->
 React frontend for the Django Admin Portal with authentication.
 
 ## Features

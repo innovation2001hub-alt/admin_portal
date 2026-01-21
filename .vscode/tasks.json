@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Django Backend Server",
+			"type": "shell",
+			"command": "python manage.py runserver",
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Run Django Backend Server",
+			"type": "shell",
+			"command": "python admin_portal/manage.py runserver",
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}

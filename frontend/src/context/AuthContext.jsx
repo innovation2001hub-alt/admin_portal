@@ -42,6 +42,20 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  // Helper functions for role checking
+  const hasRole = (roleName) => {
+    return user?.roles?.some((role) => role.name === roleName) || false;
+  };
+
+  const hasAnyRole = (roleNames) => {
+    return roleNames.some((roleName) => hasRole(roleName));
+  };
+
+  const isMaker = () => hasRole('MAKER');
+  const isChecker = () => hasRole('CHECKER');
+  const isAdmin = () => hasRole('ADMIN');
+  const isSuperAdmin = () => hasRole('SUPER_ADMIN');
+
   const value = {
     user,
     loading,
@@ -49,6 +63,12 @@ export const AuthProvider = ({ children }) => {
     login,
     logout,
     isAuthenticated: !!user,
+    hasRole,
+    hasAnyRole,
+    isMaker,
+    isChecker,
+    isAdmin,
+    isSuperAdmin,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

@@ -9,7 +9,9 @@ from .unit_serializer import UnitSerializer, UnitDetailSerializer
 from .approval_serializer import (
     ApprovalRequestSerializer,
     ApprovalRequestDetailSerializer,
-    ApprovalActionSerializer
+    ApprovalActionSerializer,
+    ApprovalCreateSerializer,
+    ApprovalLogSerializer,
 )
 
 __all__ = [
@@ -21,4 +23,6 @@ __all__ = [
     'ApprovalRequestSerializer',
     'ApprovalRequestDetailSerializer',
     'ApprovalActionSerializer',
+    'ApprovalCreateSerializer',
+    'ApprovalLogSerializer',
 ]

@@ -37,12 +37,13 @@ class LoginView(ViewSet):
     
     def create(self, request):
         """Handle login request."""
-        employee_id = request.data.get('employee_id')
+        # Accept both 'employee_id' and 'username' fields
+        employee_id = request.data.get('employee_id') or request.data.get('username')
         password = request.data.get('password')
         
         if not employee_id or not password:
             return Response(
-                {'error': 'Employee ID and password are required.'},
+                {'error': 'Username/Employee ID and password are required.'},
                 status=status.HTTP_400_BAD_REQUEST
             )
         
@@ -50,7 +51,7 @@ class LoginView(ViewSet):
             # Get client IP
             ip_address = self._get_client_ip(request)
             
-            # Authenticate user
+            # Authenticate user (can be by employee_id or username)
             user = AuthService.authenticate_user(employee_id, password, ip_address)
             
             # Generate token
@@ -95,11 +96,13 @@ class LogoutView(ViewSet):
     authentication_classes = [TokenAuthentication]
     
     def create(self, request):
-        """Handle logout request."""
+        """Handle logout request. Clears session and deletes token."""
+        from django.contrib.auth import logout as django_logout
         try:
             ip_address = self._get_client_ip(request)
             AuthService.logout_user(request.user, ip_address)
-            
+            # Clear the session
+            django_logout(request)
             return Response(
                 {'message': 'Logout successful.'},
                 status=status.HTTP_200_OK

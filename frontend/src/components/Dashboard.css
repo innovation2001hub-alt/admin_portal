@@ -1,16 +1,20 @@
+/* Import workflow styles */
+@import './ApprovalWorkflow.css';
+
 .dashboard-container {
   min-height: 100vh;
   background-color: #f5f7fa;
 }
 
 .dashboard-header {
-  background: linear-gradient(135deg, #0065A4 0%, #004d7b 100%);
+  background: linear-gradient(135deg, #2e5c79 0%, #3e667c 100%);
   color: white;
   padding: 24px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 4px solid;
 }
 
 .dashboard-header-logo {
@@ -42,11 +46,12 @@
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
+  margin-left: auto;
 }
 
 .logout-button:hover {
   background: white;
-  color: #667eea;
+  color: #0065A4;
 }
 
 .dashboard-content {

@@ -1,8 +1,8 @@
 """
-Serializers for ApprovalRequest model (Maker-Checker Workflow).
+Serializers for ApprovalRequest model (Maker-Checker Workflow with Hierarchy Routing).
 """
 from rest_framework import serializers
-from admin_core.models import ApprovalRequest, User
+from admin_core.models import ApprovalRequest, ApprovalLog, User, Unit
 
 
 class UserSimpleSerializer(serializers.ModelSerializer):
@@ -14,42 +14,71 @@ class UserSimpleSerializer(serializers.ModelSerializer):
         fields = ['id', 'username', 'full_name', 'employee_id']
 
 
+class UnitSimpleSerializer(serializers.ModelSerializer):
+    """Simple serializer for Unit in nested contexts."""
+    class Meta:
+        model = Unit
+        fields = ['id', 'name', 'code', 'unit_type']
+
+
+class ApprovalLogSerializer(serializers.ModelSerializer):
+    """Serializer for ApprovalLog audit trail."""
+    performed_by = UserSimpleSerializer(read_only=True)
+    action_display = serializers.CharField(source='get_action_display', read_only=True)
+    
+    class Meta:
+        model = ApprovalLog
+        fields = ['id', 'action', 'action_display', 'performed_by', 'remarks', 'timestamp']
+        read_only_fields = ['id', 'action', 'action_display', 'performed_by', 'timestamp']
+
+
 class ApprovalRequestSerializer(serializers.ModelSerializer):
     """
     Serializer for ApprovalRequest model.
     Handles creation and listing of approval requests.
+    
+    Used by MAKER to create requests and ADMIN/CHECKER to view.
     """
-    maker = UserSimpleSerializer(read_only=True)
-    checker = UserSimpleSerializer(read_only=True)
+    created_by = UserSimpleSerializer(read_only=True)
+    assigned_checker = UserSimpleSerializer(read_only=True)
+    maker_unit = UnitSimpleSerializer(read_only=True)
+    checker_unit = UnitSimpleSerializer(read_only=True)
     is_pending = serializers.SerializerMethodField()
+    status_display = serializers.CharField(source='get_status_display', read_only=True)
     
     class Meta:
         model = ApprovalRequest
         fields = [
             'id',
-            'action_type',
+            'request_type',
+            'title',
+            'description',
             'payload',
-            'maker',
-            'checker',
+            'created_by',
+            'maker_unit',
+            'assigned_checker',
+            'checker_unit',
             'status',
+            'status_display',
             'is_pending',
             'created_at',
             'updated_at',
-            'completed_at',
         ]
         read_only_fields = [
             'id',
-            'maker',
-            'checker',
+            'created_by',
+            'maker_unit',
+            'assigned_checker',
+            'checker_unit',
+            'status',
+            'status_display',
             'created_at',
             'updated_at',
-            'completed_at',
             'is_pending',
         ]
         extra_kwargs = {
-            'action_type': {'required': True, 'min_length': 3},
-            'payload': {'required': True},
-            'status': {'read_only': True},
+            'request_type': {'required': True, 'min_length': 3},
+            'payload': {'required': False, 'allow_null': True},
         }
     
     def get_is_pending(self, obj):
@@ -60,37 +89,58 @@ class ApprovalRequestSerializer(serializers.ModelSerializer):
 class ApprovalRequestDetailSerializer(serializers.ModelSerializer):
     """
     Detailed serializer for ApprovalRequest.
-    Includes full user information and comments.
+    
+    Includes full user information, remarks, review timestamps, and audit logs.
+    Used for detail view by all roles.
     """
-    maker = UserSimpleSerializer(read_only=True)
-    checker = UserSimpleSerializer(read_only=True)
+    created_by = UserSimpleSerializer(read_only=True)
+    assigned_checker = UserSimpleSerializer(read_only=True)
+    reviewed_by = UserSimpleSerializer(read_only=True)
+    maker_unit = UnitSimpleSerializer(read_only=True)
+    checker_unit = UnitSimpleSerializer(read_only=True)
     is_pending = serializers.SerializerMethodField()
+    status_display = serializers.CharField(source='get_status_display', read_only=True)
+    logs = ApprovalLogSerializer(many=True, read_only=True)
     
     class Meta:
         model = ApprovalRequest
         fields = [
             'id',
-            'action_type',
+            'request_type',
+            'title',
+            'description',
             'payload',
-            'maker',
-            'checker',
+            'created_by',
+            'maker_unit',
+            'assigned_checker',
+            'checker_unit',
             'status',
+            'status_display',
             'is_pending',
-            'comments',
+            'reviewed_by',
+            'reviewed_at',
+            'remarks',
             'created_at',
             'updated_at',
-            'completed_at',
+            'logs',
         ]
         read_only_fields = [
             'id',
-            'maker',
-            'checker',
+            'request_type',
+            'created_by',
+            'maker_unit',
+            'assigned_checker',
+            'checker_unit',
             'payload',
-            'action_type',
+            'status',
+            'status_display',
+            'is_pending',
+            'reviewed_by',
+            'reviewed_at',
+            'remarks',
             'created_at',
             'updated_at',
-            'completed_at',
-            'is_pending',
+            'logs',
         ]
     
     def get_is_pending(self, obj):
@@ -98,20 +148,43 @@ class ApprovalRequestDetailSerializer(serializers.ModelSerializer):
         return obj.is_pending()
 
 
+class ApprovalCreateSerializer(serializers.ModelSerializer):
+    """
+    Serializer for MAKER to create new approval requests.
+    
+    Validates hierarchy and enforces business rules.
+    """
+    class Meta:
+        model = ApprovalRequest
+        fields = [
+            'request_type',
+            'title',
+            'description',
+            'payload',
+        ]
+        extra_kwargs = {
+            'request_type': {'required': True, 'min_length': 3},
+            'title': {'required': False, 'allow_blank': True},
+            'description': {'required': False, 'allow_blank': True},
+            'payload': {'required': False, 'allow_null': True},
+        }
+    
+    def validate(self, data):
+        """Validate that payload is valid JSON."""
+        payload = data.get('payload')
+        if payload and not isinstance(payload, dict):
+            raise serializers.ValidationError(
+                {'payload': 'Payload must be a valid JSON object'}
+            )
+        return data
+
+
 class ApprovalActionSerializer(serializers.Serializer):
     """
     Serializer for approval actions (approve/reject).
+    Accepts remarks from CHECKER when approving/rejecting.
     """
-    action = serializers.ChoiceField(choices=['approve', 'reject'])
-    comments = serializers.CharField(
-        max_length=1000,
-        allow_blank=True,
-        required=False
-    )
+    remarks = serializers.CharField(required=False, allow_blank=True, max_length=1000)
     
-    def validate(self, data):
-        """Additional validation for approval action."""
-        action = data.get('action')
-        if action not in ['approve', 'reject']:
-            raise serializers.ValidationError('Invalid action.')
-        return data
+    class Meta:
+        fields = ['remarks']

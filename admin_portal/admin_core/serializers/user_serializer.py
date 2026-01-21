@@ -13,10 +13,7 @@ class RoleSimpleSerializer(serializers.ModelSerializer):
         fields = ['id', 'name']
     
     def to_representation(self, instance):
-        """Filter out non-standard roles."""
-        allowed_roles = ['ADMIN', 'MAKER', 'CHECKER']
-        if instance.name not in allowed_roles:
-            return None
+        """Include all roles including SUPER_ADMIN."""
         return super().to_representation(instance)
 
 
@@ -76,7 +73,7 @@ class UserSerializer(serializers.ModelSerializer):
     )
     roles = RoleSimpleSerializer(many=True, read_only=True)
     role_ids = serializers.PrimaryKeyRelatedField(
-        queryset=Role.objects.filter(name__in=['ADMIN', 'MAKER', 'CHECKER']),
+        queryset=Role.objects.all(),
         source='roles',
         many=True,
         write_only=True,

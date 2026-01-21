@@ -79,4 +79,102 @@ export const authAPI = {
   },
 };
 
+// Approval Workflow API
+export const approvalsAPI = {
+  // Create new approval request
+  create: async (requestType, title, description, payload = {}) => {
+    try {
+      const response = await api.post('/approvals/', {
+        request_type: requestType,
+        title,
+        description,
+        payload,
+      });
+      return response.data;
+    } catch (error) {
+      throw error.response?.data || { error: 'Failed to create request' };
+    }
+  },
+
+  // Get all approvals (with filters)
+  getAll: async (filters = {}) => {
+    try {
+      const response = await api.get('/approvals/', { params: filters });
+      return response.data;
+    } catch (error) {
+      throw error.response?.data || { error: 'Failed to fetch approvals' };
+    }
+  },
+
+  // Get single approval
+  get: async (id) => {
+    try {
+      const response = await api.get(`/approvals/${id}/`);
+      return response.data;
+    } catch (error) {
+      throw error.response?.data || { error: 'Failed to fetch approval' };
+    }
+  },
+
+  // Get my requests (MAKER)
+  getMyRequests: async () => {
+    try {
+      console.log('Fetching my requests from:', `${API_URL}/approvals/my-requests/`);
+      const response = await api.get('/approvals/my-requests/');
+      console.log('My requests response:', response.data);
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching my requests:', error.response || error);
+      throw error.response?.data || { error: `Failed to fetch your requests: ${error.message}` };
+    }
+  },
+
+  // Get pending queue (CHECKER)
+  getPendingQueue: async () => {
+    try {
+      console.log('Fetching pending queue from:', `${API_URL}/approvals/pending-queue/`);
+      const response = await api.get('/approvals/pending-queue/');
+      console.log('Pending queue response:', response.data);
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching pending queue:', error.response || error);
+      throw error.response?.data || { error: `Failed to fetch pending queue: ${error.message}` };
+    }
+  },
+
+  // Get statistics
+  getStatistics: async () => {
+    try {
+      const response = await api.get('/approvals/statistics/');
+      return response.data;
+    } catch (error) {
+      throw error.response?.data || { error: 'Failed to fetch statistics' };
+    }
+  },
+
+  // Approve request
+  approve: async (id, remarks = '') => {
+    try {
+      const response = await api.post(`/approvals/${id}/approve/`, {
+        remarks,
+      });
+      return response.data;
+    } catch (error) {
+      throw error.response?.data || { error: 'Failed to approve request' };
+    }
+  },
+
+  // Reject request
+  reject: async (id, remarks = '') => {
+    try {
+      const response = await api.post(`/approvals/${id}/reject/`, {
+        remarks,
+      });
+      return response.data;
+    } catch (error) {
+      throw error.response?.data || { error: 'Failed to reject request' };
+    }
+  },
+};
+
 export default api;

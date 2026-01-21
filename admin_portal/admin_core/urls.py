@@ -9,6 +9,7 @@ from .views.auth_views import LoginView, LogoutView, ChangePasswordView, Current
 from .views.unit_views import UnitViewSet
 from .views.user_views import UserViewSet
 from .views.approval_views import ApprovalRequestViewSet
+from .views.user_management_views import UserManagementViewSet
 
 
 # Create router and register viewsets
@@ -16,6 +17,7 @@ router = DefaultRouter()
 router.register(r'units', UnitViewSet, basename='unit')
 router.register(r'users', UserViewSet, basename='user')
 router.register(r'approvals', ApprovalRequestViewSet, basename='approval')
+router.register(r'user-management', UserManagementViewSet, basename='user-management')
 
 # Authentication endpoints
 auth_urlpatterns = [

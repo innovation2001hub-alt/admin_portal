@@ -44,13 +44,13 @@ const Login = () => {
           )}
 
           <div className="form-group">
-            <label htmlFor="employeeId">Employee ID (PF ID)</label>
+            <label htmlFor="employeeId">Employee ID or Username</label>
             <input
               type="text"
               id="employeeId"
               value={employeeId}
               onChange={(e) => setEmployeeId(e.target.value)}
-              placeholder="Enter your Employee ID"
+              placeholder="Enter your Employee ID or username"
               disabled={loading}
               autoFocus
             />
